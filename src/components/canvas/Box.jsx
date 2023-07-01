@@ -14,7 +14,7 @@ const Box = (props) => {
     myMesh.current.rotation.z = a/3;
   });
   return (
-      <mesh ref={myMesh}>
+      <mesh ref={myMesh} scale={props.scale}>
         <boxBufferGeometry attach="geometry" args={[3,3,3]} />
         <meshNormalMaterial attach="material" />
       </mesh>
