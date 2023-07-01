@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { logo, menu, close } from "../assets"
 import { navLinks } from '../constants';
+import { useMediaQuery } from '@mui/material';
 
 const NavBar = () => {
   const [active, setActive] = useState('');
@@ -39,7 +40,7 @@ const NavBar = () => {
           >
             {/* style={{ "border-radius": "100%", "height": "70px" }} */}
             <img src={`${logo}`} className='w-12 h-12 object-contain rounded-full' alt="Me" />
-            <p className='text-color-white text-[20px] font-bold cursor-pointer flex' >&nbsp; Anuj Sharma &nbsp;<span className='sm:block hidden'> | @anujsharmartx</span></p>
+            <p className='text-color-white text-[20px] font-bold cursor-pointer flex' >&nbsp; Anuj Sharma &nbsp;{ useMediaQuery('(min-width:1000px)') ? "| @anujsharmartx" : ""}</p>
           </Link>
           <ul className='list-none hidden sm:flex flex-row gap-10'>
             {navLinks.map((nav) => (

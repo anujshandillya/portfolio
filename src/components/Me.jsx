@@ -4,6 +4,7 @@ import { OrbitControls, PerspectiveCamera, Stage } from '@react-three/drei'
 import Box from './canvas/Box'
 import Avatar from './canvas/Avatar'
 import { Chair, Computer } from './canvas'
+import { useMediaQuery } from '@mui/material'
 
 const Me = () => {
   return (
@@ -17,7 +18,9 @@ const Me = () => {
             Web Developer, Competitive Programmer, <br /> Artist, Video Editor.
           </p>
         </div>
-        <div className="flex w-[400px] h-[400px]">
+        {
+          useMediaQuery('(min-width:900px)') ? 
+          <div className="flex w-[400px] h-[400px]">
           <Canvas>
             <OrbitControls />
             <ambientLight intensity={0.5} />
@@ -26,8 +29,9 @@ const Me = () => {
               <Box />
             </Suspense>
           </Canvas>
-        </div>
-        <div className='absolute top-[360px] w-full h-[700px]'>
+        </div> : ""
+        }
+        <div className='absolute top-[360px] w-[90%] h-[700px] m-auto'>
           <Canvas camera={{ position: [0, -20, 0], fov: 20 }}>
             {/* <OrbitControls /> */}
             <PerspectiveCamera />
