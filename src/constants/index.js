@@ -10,6 +10,8 @@ import {
   git,
   figma,
   threejs,
+  dig,
+  rtx
 } from "../assets";
 
 const navLinks = [
@@ -27,20 +29,24 @@ const navLinks = [
   },
 ];
 
-// const services = [
-//   {
-//     title: "Web Developer",
-//     icon: web,
-//   },
-//   {
-//     title: "React Developer",
-//     icon: mobile,
-//   },
-//   {
-//     title: "Backend Developer",
-//     icon: backend,
-//   },
-// ];
+const services = [
+  {
+    title: "React Developer",
+    icon: reactjs,
+  },
+  {
+    title: "Backend Developer",
+    icon: nodejs,
+  },
+  {
+    title: "Artist",
+    icon: rtx,
+  },
+  {
+    title: "Digital Creator",
+    icon: dig,
+  }
+];
 
 const technologies = [
   {
@@ -237,7 +243,7 @@ const technologies = [
 //   },
 // ];
 
-export { navLinks, technologies };
+export { navLinks, technologies, services };
 
 
 // experiences, testimonials, projects, services
