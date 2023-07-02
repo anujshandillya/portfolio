@@ -5,6 +5,7 @@ import Box from './canvas/Box'
 import Avatar from './canvas/Avatar'
 import { Chair, Computer } from './canvas'
 import { useMediaQuery } from '@mui/material'
+import { motion } from 'framer-motion'
 
 const Me = () => {
   return (
@@ -23,7 +24,6 @@ const Me = () => {
           useMediaQuery('(min-width:900px)') ? 
           <div className="flex w-[400px] h-[400px]">
           <Canvas>
-            <OrbitControls />
             <ambientLight intensity={0.5} />
             <spotLight position={[0, 4, 3]} />
             <Suspense fallback={null}>
@@ -34,7 +34,7 @@ const Me = () => {
         }
         {
           useMediaQuery('(min-width:900px)') ? 
-          <div className='absolute top-[360px] w-[90%] h-[700px] m-auto'>
+          <div className='absolute top-[300px] w-[90%] h-[700px] m-auto'>
           <Canvas camera={{ position: [0, -20, 0], fov: 20 }}>
             <PerspectiveCamera />
             <ambientLight intensity={0.5} />
@@ -49,6 +49,23 @@ const Me = () => {
          : 
          ""
         }
+      </div>
+      <div className={`absolute ${useMediaQuery('(min-width:900px)') ? 'top-[1000px]' : ''} xs:bottom-10 bottom-32 w-full flex justify-center items-center`}>
+        <a href='#about'>
+          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+            <motion.div
+              animate={{
+                y: [0, 24, 0]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: 'loop'
+              }}
+              className='w-3 h-3 rounded-full bg-secondary mb-1'
+            />
+          </div>
+        </a>
       </div>
 
     </section>

@@ -12,8 +12,6 @@ import {
   Skills,
   Contact,
   Projects,
-  CanvasLoader,
-  Avatar
   } from "./components"
 
 const App = () => {
@@ -30,7 +28,6 @@ const App = () => {
         <Projects />
         <div className="relative z-0">
           <Contact />
-          <CanvasLoader />
         </div>
       </div>
     </Router>
