@@ -47,8 +47,8 @@ const About = () => {
       >
         Hello! I'm Anuj Sharma, a creative developer specializing in MERN stack web development. With a strong command of frontend and backend technologies, I craft dynamic and user-friendly websites. Beyond coding, I'm a skilled artist in sketching, painting, video editing, and photo editing.<br /><br />I strive to combine my technical prowess with my artistic sensibilities, delivering websites and digital experiences that are not only visually appealing but also functionally robust. I am constantly seeking opportunities to learn and grow, staying up-to-date with the latest trends and technologies in the industry.<br /><br /> My diverse skill set allows me to create visually captivating digital experiences. Let's collaborate and bring your ideas to life!
       </motion.p><br />
-      <span className='mx-20'>Faridabad <LocationOn /></span>
-      <a className='mx-20' href='#contact'>Email <Email /></a>
+      <span className='mx-10'>Faridabad <LocationOn /></span>
+      <a className='mx-9' href='#contact'>Email <Email /></a>
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((services, index) => (
