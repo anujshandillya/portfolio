@@ -24,6 +24,7 @@ const Me = () => {
           useMediaQuery('(min-width:900px)') ? 
           <div className="flex w-[400px] h-[400px]">
           <Canvas>
+                <OrbitControls />
             <ambientLight intensity={0.5} />
             <spotLight position={[0, 4, 3]} />
             <Suspense fallback={null}>
@@ -37,7 +38,7 @@ const Me = () => {
           <div className='absolute top-[300px] w-[90%] h-[700px] m-auto'>
           <Canvas camera={{ position: [0, -20, 0], fov: 20 }}>
             <PerspectiveCamera />
-            <ambientLight intensity={0.5} />
+            <ambientLight intensity={1.5} />
             <spotLight position={[-2, 1, 3]} />
             <Suspense fallback={null}>
               <Avatar position={[-2, 0, -2]} scale={3.5} />

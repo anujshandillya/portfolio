@@ -1,7 +1,7 @@
 import { MeshDistortMaterial, Sphere, useAnimations } from '@react-three/drei'
 import React, { useRef } from 'react'
 import { useFrame, useLoader } from '@react-three/fiber'
-import {TextureLoader} from 'three/src/loaders/TextureLoader'
+// import {TextureLoader} from 'three/src/loaders/TextureLoader'
 // import me from "./me2.png"
 
 const Box = (props) => {
@@ -15,7 +15,7 @@ const Box = (props) => {
   });
   return (
       <mesh ref={myMesh} scale={props.scale}>
-        <boxBufferGeometry attach="geometry" args={[3,3,3]} />
+        <boxGeometry attach="geometry" args={[3, 3, 3]} />
         <meshNormalMaterial attach="material" />
       </mesh>
   )
