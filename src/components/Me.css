@@ -1,0 +1,12 @@
+.text_field{
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 1px #915EFF;
+    transition: 0.3s;
+}
+
+.text_field:hover {
+    color: #915EFF;
+    transition: 0.3s;
+    -webkit-text-stroke: 1px blueviolet;
+}

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { fadeIn, textVariant } from '../utils/motion'
 import { services } from '../constants'
 import { Tilt } from 'react-tilt'
+import { useMediaQuery } from '@mui/material'
 
 const ServiceCard = (index, title, icon) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -36,7 +37,7 @@ const About = () => {
   return (
     <>
 
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} className={`${useMediaQuery('(min-width:390px)') ? '' : 'mt-8'}`}>
         <p className={`${styles.sectionSubText}`}>INTRODUCTION</p>
         <p className={`${styles.sectionHeadText} my-2`}>OVERVIEW..<span className='text-[#915EFF]'>.</span></p>
       </motion.div>
