@@ -11,7 +11,17 @@ import {
   figma,
   threejs,
   dig,
-  rtx
+  rtx,
+  ps,
+  ai,
+  win,
+  mac,
+  linux,
+  blender,
+  cpp,
+  c,
+  py,
+  java
 } from "../assets";
 
 const navLinks = [
@@ -50,14 +60,6 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
     name: "JavaScript",
     icon: javascript,
   },
@@ -86,13 +88,25 @@ const technologies = [
     icon: threejs,
   },
   {
-    name: "git",
-    icon: git,
+    name: "c++",
+    icon: cpp,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "python",
+    icon: py,
   },
+  {
+    name: "blender",
+    icon: blender,
+  },
+  {
+    name: "photoshop",
+    icon: ps,
+  },
+  {
+    name: "illustrator",
+    icon: ai
+  }
 ];
 
 // const experiences = [

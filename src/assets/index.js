@@ -15,8 +15,18 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
-import dig from "./dig.png"
-import rtx from "./rtx.avif"
+import dig from "./dig.png";
+import rtx from "./rtx.avif";
+import ps from "./tech/ps.png";
+import ai from "./tech/ai.png";
+import blender from "./tech/blender.png";
+import win from "./tech/windows.png";
+import mac from "./tech/macos.png";
+import linux from "./tech/linux.png";
+import java from "./tech/java.png";
+import c from "./tech/c.png";
+import py from "./tech/py.webp";
+import cpp from "./tech/c++.png";
 
 // import meta from "./company/meta.png";
 // import shopify from "./company/shopify.png";
@@ -28,6 +38,16 @@ import rtx from "./rtx.avif"
 // import tripguide from "./tripguide.png";
 
 export {
+  ps,
+  ai,
+  blender,
+  win,
+  mac,
+  linux,
+  java,
+  c,
+  cpp,
+  py,
   logo,
   github,
   menu,

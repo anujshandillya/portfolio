@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Suspense} from 'react'
 import { LocationOn, Email } from '@mui/icons-material'
 import { styles } from '../styles'
 import { SectionWrapper } from '../hoc'
@@ -7,6 +7,11 @@ import { fadeIn, textVariant } from '../utils/motion'
 import { services } from '../constants'
 import { Tilt } from 'react-tilt'
 import { useMediaQuery } from '@mui/material'
+import Avatar from './canvas/Avatar'
+import { Chair, Computer } from './canvas'
+import { OrbitControls, PerspectiveCamera, Stage } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+
 
 const ServiceCard = (index, title, icon) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -36,7 +41,6 @@ const ServiceCard = (index, title, icon) => (
 const About = () => {
   return (
     <>
-
       <motion.div variants={textVariant()} className={`${useMediaQuery('(min-width:390px)') ? '' : 'mt-8'}`}>
         <p className={`${styles.sectionSubText}`}>INTRODUCTION</p>
         <p className={`${styles.sectionHeadText} my-2`}>OVERVIEW..<span className='text-[#915EFF]'>.</span></p>
