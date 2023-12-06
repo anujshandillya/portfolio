@@ -57,7 +57,7 @@ const About = () => {
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((services, index) => (
-          <Tilt className='xs:w-[250px] w-full'>
+          <Tilt className='xs:w-[250px] w-full' key={index}>
             <motion.div
               variants={fadeIn("right", "spring", index * 1, 0.75)}
               className='w-full bg-gradient-to-br from-purple-200 via-purple-400 to-purple-800 p-[2px] rounded-[20px] shadow-card'

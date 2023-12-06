@@ -24,7 +24,6 @@ const BallCanvas = (props) => {
     return (
         <>
             <Canvas>
-                <OrbitControls />
                 <PerspectiveCamera />
                 <ambientLight />
                 <spotLight />

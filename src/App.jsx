@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  BrowserRouter
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import {
   NavBar,
   Me,
@@ -12,26 +7,29 @@ import {
   Skills,
   Contact,
   Projects,
-  } from "./components"
+} from "./components";
 
 const App = () => {
   return (
     <Router>
-      <div className="relative z-0 bg-primary">
+      <div className="z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <NavBar/>
+          <NavBar />
           <Me />
         </div>
-        <About />
-        {/* <Experience /> */}
-        <Skills />
-        <Projects />
+        <div className="">
+          <About />
+          <Experience />
+          <Skills />
+          <Projects />
+        </div>
+
         <div className="relative z-0">
           <Contact />
         </div>
       </div>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;
