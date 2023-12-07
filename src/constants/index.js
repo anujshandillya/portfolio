@@ -21,7 +21,9 @@ import {
   cpp,
   c,
   py,
-  java
+  java,
+  pr,
+  fm
 } from "../assets";
 
 const navLinks = [
@@ -49,20 +51,32 @@ const services = [
     icon: nodejs,
   },
   {
+    title: "Competitive Programmer",
+    icon: cpp,
+  },
+  {
     title: "Artist",
-    icon: rtx,
+    icon: ai,
   },
   {
     title: "Digital Creator",
     icon: dig,
-  }
+  },
+  {
+    title: "Editor",
+    icon: ps,
+  },
+  {
+    title: "Blender",
+    icon: blender,
+  },
+  {
+    title: "Video Editor",
+    icon: pr
+  },
 ];
 
 const technologies = [
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
   {
     name: "React JS",
     icon: reactjs,
@@ -70,10 +84,6 @@ const technologies = [
   {
     name: "Redux Toolkit",
     icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
   },
   {
     name: "Node JS",
@@ -88,25 +98,13 @@ const technologies = [
     icon: threejs,
   },
   {
-    name: "c++",
-    icon: cpp,
+    name: "Framer Motion",
+    icon: fm
   },
   {
     name: "python",
     icon: py,
   },
-  {
-    name: "blender",
-    icon: blender,
-  },
-  {
-    name: "photoshop",
-    icon: ps,
-  },
-  {
-    name: "illustrator",
-    icon: ai
-  }
 ];
 
 const experiences = [

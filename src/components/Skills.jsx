@@ -19,7 +19,7 @@ const Skills = (props) => {
         <motion.p className={`${styles.sectionHeadText} my-2`}>SKILLS..<span className='text-[#915EFF]'>.</span></motion.p>
         <motion.div className="mt-12 flex flex-row flex-wrap justify-center gap-10">
           {technologies.map(tech => (
-            <div className="w-28 h-28" key={tech.name}>
+            <div className="w-[200px] h-[200px]" key={tech.name}>
               <BallCanvas imgurl={tech.icon} />
             </div>
           ))}
