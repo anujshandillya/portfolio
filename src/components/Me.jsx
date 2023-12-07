@@ -19,7 +19,7 @@ const Me = () => {
             <img src="/anuj-av.png" alt="Anuj Sharma" />
           )}
           <h1
-            className={`font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 text-white`}
+            className={`font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2`}
           >
             Hi, I'm <span className="text_field">Anuj Sharma</span>
           </h1>
