@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import "./Me.css";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera, Stage } from "@react-three/drei";
+import { OrbitControls, OrthographicCamera, PerspectiveCamera, Stage } from "@react-three/drei";
 import Box from "./canvas/Box";
 import Avatar from "./canvas/Avatar";
 import { Chair, Computer } from "./canvas";
@@ -45,9 +45,17 @@ const Me = () => {
         {useMediaQuery("(min-width:900px)") ? (
           <div className="absolute top-[300px] w-[90%] h-[100%] m-auto">
             <Canvas camera={{ position: [0, -20, 0], fov: 20 }}>
-              <PerspectiveCamera />
-              <ambientLight intensity={1.5} />
-              <spotLight position={[-2, 1, 3]} />
+              <OrbitControls 
+                enableZoom={false}
+                minPolarAngle={5.7*Math.PI/6}
+                maxPolarAngle={Math.PI}
+                minAzimuthAngle={0}
+                maxAzimuthAngle={0}
+              />
+              <OrthographicCamera />
+              <pointLight position={[3, 1, 5]} intensity={300} />
+              <ambientLight intensity={0.8} />
+              {/* <spotLight position={[4, 2, 5]} intensity={9} /> */}
               <Suspense fallback={null}>
                 <Avatar position={[-2, 0, -2]} scale={3.5} />
                 <Computer scales={0.5} />
@@ -60,7 +68,7 @@ const Me = () => {
         )}
       </div>
 
-      {useMediaQuery("(min-width:900px)") ? (
+      {/* {useMediaQuery("(min-width:900px)") ? (
         <div
           className={`absolute top-[1000px] xs:bottom-10 bottom-32 w-full flex justify-center items-center`}
         >
@@ -82,7 +90,7 @@ const Me = () => {
         </div>
       ) : (
         ""
-      )}
+      )} */}
     </section>
   );
 };
