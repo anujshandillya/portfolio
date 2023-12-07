@@ -2,11 +2,11 @@
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px #915EFF;
-    transition: 0.3s;
+    transition: 0.7s;
 }
 
 .text_field:hover {
     color: #915EFF;
-    transition: 0.3s;
-    -webkit-text-stroke: 1px blueviolet;
+    transition: 0.7s;
+    -webkit-text-stroke: 1px #915EFF;
 }
