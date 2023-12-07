@@ -18,7 +18,6 @@ const Experience = () => {
         variants={textVariant()}
         className={`${useMediaQuery("(min-width:390px)") ? "" : "mt-8"}`}
       >
-        {/* <p className={`${styles.sectionSubText}`}>SKILLS</p> */}
         <motion.p className={`${styles.sectionHeadText} my-2`}>
           EXPERIENCE..<span className="text-[#915EFF]">.</span>
         </motion.p>

@@ -15,7 +15,6 @@ const Skills = (props) => {
   return (
     <>
       <motion.div variants={textVariant()} className={`${useMediaQuery('(min-width:390px)') ? '' : 'mt-8'}`}>
-        {/* <p className={`${styles.sectionSubText}`}>SKILLS</p> */}
         <motion.p className={`${styles.sectionHeadText} my-2`}>SKILLS..<span className='text-[#915EFF]'>.</span></motion.p>
         <motion.div className="mt-12 flex flex-row flex-wrap justify-center gap-10">
           {technologies.map(tech => (
@@ -23,7 +22,6 @@ const Skills = (props) => {
               <BallCanvas imgurl={tech.icon} />
             </div>
           ))}
-
         </motion.div>
 
       </motion.div>

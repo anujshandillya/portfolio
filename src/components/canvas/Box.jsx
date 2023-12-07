@@ -1,11 +1,8 @@
 import { MeshDistortMaterial, Sphere, useAnimations } from '@react-three/drei'
 import React, { useRef } from 'react'
 import { useFrame, useLoader } from '@react-three/fiber'
-// import {TextureLoader} from 'three/src/loaders/TextureLoader'
-// import me from "./me2.png"
 
 const Box = (props) => {
-  // const colorMap = useLoader( TextureLoader, me);
   const myMesh = useRef();
   useFrame(({clock}) => {
     const a = clock.getElapsedTime();
