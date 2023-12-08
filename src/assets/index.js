@@ -27,6 +27,8 @@ import java from "./tech/java.png";
 import c from "./tech/c.png";
 import py from "./tech/py.webp";
 import cpp from "./tech/c++.png";
+import pr from "./tech/Pr.png";
+import fm from "./tech/framer-motion.svg"
 
 // import meta from "./company/meta.png";
 // import shopify from "./company/shopify.png";
@@ -38,6 +40,8 @@ import cpp from "./tech/c++.png";
 // import tripguide from "./tripguide.png";
 
 export {
+  fm,
+  pr,
   ps,
   ai,
   blender,
