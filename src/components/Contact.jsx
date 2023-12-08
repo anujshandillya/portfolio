@@ -3,7 +3,9 @@ import { SectionWrapper } from '../hoc'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+      <div>Contacts</div>
+    </>
   )
 }
 
