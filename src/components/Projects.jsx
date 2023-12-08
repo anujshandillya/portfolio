@@ -3,7 +3,9 @@ import { SectionWrapper } from '../hoc'
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <>
+      <div>Projects</div>
+    </>
   )
 }
 
