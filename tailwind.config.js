@@ -22,7 +22,7 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/src/assets/herobg.jpeg')",
+        "hero-pattern": "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(5, 8, 22, 1)), url('/src/assets/herobg.jpeg')",
       },
     },
   },
