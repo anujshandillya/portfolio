@@ -10,7 +10,7 @@ const Avatar = (props) => {
   const group = useRef();
   const {
     animations: typingAnimation
-  } = useFBX("./Typing.fbx");
+  } = useFBX("Typing.fbx");
 
   typingAnimation[0].name = "Typing"
   const { nodes, materials } = useGLTF('/648aceaf0c4f648efec80d9d.glb')
