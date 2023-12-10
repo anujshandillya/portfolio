@@ -23,7 +23,10 @@ import {
   py,
   java,
   pr,
-  fm
+  fm,
+  ina,
+  fnd,
+  sm,
 } from "../assets";
 
 const navLinks = [
@@ -151,73 +154,118 @@ const experiences = [
 //   },
 // ];
 
-// const projects = [
-//   {
-//     name: "Car Rent",
-//     description:
-//       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-//     tags: [
-//       {
-//         name: "react",
-//         color: "blue-text-gradient",
-//       },
-//       {
-//         name: "mongodb",
-//         color: "green-text-gradient",
-//       },
-//       {
-//         name: "tailwind",
-//         color: "pink-text-gradient",
-//       },
-//     ],
-//     image: carrent,
-//     source_code_link: "https://github.com/",
-//   },
-//   {
-//     name: "Job IT",
-//     description:
-//       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-//     tags: [
-//       {
-//         name: "react",
-//         color: "blue-text-gradient",
-//       },
-//       {
-//         name: "restapi",
-//         color: "green-text-gradient",
-//       },
-//       {
-//         name: "scss",
-//         color: "pink-text-gradient",
-//       },
-//     ],
-//     image: jobit,
-//     source_code_link: "https://github.com/",
-//   },
-//   {
-//     name: "Trip Guide",
-//     description:
-//       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-//     tags: [
-//       {
-//         name: "nextjs",
-//         color: "blue-text-gradient",
-//       },
-//       {
-//         name: "supabase",
-//         color: "green-text-gradient",
-//       },
-//       {
-//         name: "css",
-//         color: "pink-text-gradient",
-//       },
-//     ],
-//     image: tripguide,
-//     source_code_link: "https://github.com/",
-//   },
-// ];
+const projects = [
+  {
+    name: "Weather forecasting app",
+    description:
+    "Experience precision weather predictions at your fingertips with our innovative Weather Forecasting App, leveraging real-time data through seamless API integration to deliver accurate and up-to-the-minute weather updates.",
+    tags: [
+      {
+        name: "html",
+        color: "text-red-500",
+      },
+      {
+        name: "css",
+        color: "text-orange-500",
+      },
+      {
+        name: "javascript",
+        color: "text-yellow-200",
+      },
+      {
+        name: "bootstrap",
+        color: "text-purple-500",
+      },
+    ],
+    image: ina,
+  },
+  {
+    name: "ZAIKA - Pure veg",
+    description:
+    "Elevate your dining experience with our Restaurant App, offering a seamless interface for browsing menus, making reservations, and savoring culinary delights, all at your fingertips.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "text-purple-500",
+      },
+      {
+        name: "stripe",
+        color: "text-indigo-500",
+      },
+    ],
+    image: ina,
+  },
+  {
+    name: "Social Media",
+    description:
+    "Enabling seamless social experiences, our recently developed platform facilitates user registration, effortless login, and easy sharing of memorable moments through hassle-free uploads.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "material-ui",
+        color: "text-blue-500",
+      },
+    ],
+    image: sm,
+  },
+  {
+    name: "Discord bot",
+    description:
+    "Enhance your Discord server with our custom bot, bringing functionality and fun through features like moderation, automation, and entertainment, creating a vibrant and engaging community experience.",
+    tags: [
+      {
+        name: "python",
+        color: "text-lime-200",
+      },
+      {
+        name: "discord.py",
+        color: "text-indigo-400",
+      },
+    ],
+    image: ina,
+  },
+  {
+    name: "Fake News Detector",
+    description:
+    "Deploying a robust arsenal of algorithms including logistic regression, gradient boosting, decision trees, and random forest, our Fake News Detector employs cutting-edge technology to enhance accuracy in identifying and mitigating misinformation.",
+    tags: [
+      {
+        name: "flask",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "jupyter-notebook",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "python",
+        color: "text-lime-200",
+      },
+      {
+        name: "bootstrap",
+        color: "text-purple-500",
+      },
+    ],
+    image: fnd,
+  },
+];
 
-export { navLinks, technologies, services, experiences };
+export { navLinks, technologies, services, experiences, projects };
 
 
 // experiences, testimonials, projects, services

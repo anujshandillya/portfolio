@@ -29,6 +29,9 @@ import py from "./tech/py.webp";
 import cpp from "./tech/c++.png";
 import pr from "./tech/Pr.png";
 import fm from "./tech/framer-motion.svg"
+import ina from "./Image_not_available.png"
+import sm from "./projects/social.gif"
+import fnd from "./projects/news.gif"
 
 // import meta from "./company/meta.png";
 // import shopify from "./company/shopify.png";
@@ -40,6 +43,9 @@ import fm from "./tech/framer-motion.svg"
 // import tripguide from "./tripguide.png";
 
 export {
+  ina,
+  sm,
+  fnd,
   fm,
   pr,
   ps,
