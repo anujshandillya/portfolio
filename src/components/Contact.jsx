@@ -1,10 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { Suspense, useRef, useState } from "react";
 import { SectionWrapper } from "../hoc";
 import { motion } from "framer-motion";
 import { textVariant, fadeIn, slideIn } from "../utils/motion";
 import { useMediaQuery } from "@mui/material";
 import { styles } from "../styles";
 import { Earth } from "./canvas";
+import Loader from "./canvas/Loader";
 
 const Contact = () => {
   const ref = useRef();
@@ -79,7 +80,9 @@ const Contact = () => {
             </form>
           </motion.div>
           <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
-            <Earth />
+            <Suspense fallback={<Loader />}>
+              <Earth />
+            </Suspense>
           </div>
         </motion.div>
       </motion.div>

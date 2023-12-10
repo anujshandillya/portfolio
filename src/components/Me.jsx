@@ -1,12 +1,14 @@
 import React, { Suspense } from "react";
 import "./Me.css";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, OrthographicCamera, PerspectiveCamera, Stage } from "@react-three/drei";
+import {
+  OrbitControls,
+  OrthographicCamera,
+} from "@react-three/drei";
 import Box from "./canvas/Box";
 import Avatar from "./canvas/Avatar";
-import { Chair, Computer } from "./canvas";
+import { Chair, Computer, Loader } from "./canvas";
 import { useMediaQuery } from "@mui/material";
-import { motion } from "framer-motion";
 
 const Me = () => {
   return (
@@ -34,7 +36,7 @@ const Me = () => {
             <Canvas>
               <ambientLight intensity={0.5} />
               <spotLight position={[0, 4, 3]} />
-              <Suspense fallback={null}>
+              <Suspense fallback={<Loader />}>
                 <Box scale={1} />
               </Suspense>
             </Canvas>
@@ -44,23 +46,23 @@ const Me = () => {
         )}
         {useMediaQuery("(min-width:900px)") ? (
           <div className="absolute top-[300px] w-[90%] h-[100%] m-auto">
-            <Canvas camera={{ position: [0, -20, 0], fov: 20 }}>
-              <OrbitControls 
-                enableZoom={false}
-                minPolarAngle={5.7*Math.PI/6}
-                maxPolarAngle={Math.PI}
-                minAzimuthAngle={0}
-                maxAzimuthAngle={0}
-              />
-              <OrthographicCamera />
-              <pointLight position={[3, 1, 5]} intensity={300} />
-              <ambientLight intensity={0.8} />
-              <Suspense fallback={null}>
+            <Suspense fallback={<Loader />}>
+              <Canvas camera={{ position: [0, -20, 0], fov: 20 }}>
+                <OrbitControls
+                  enableZoom={false}
+                  minPolarAngle={(5.7 * Math.PI) / 6}
+                  maxPolarAngle={Math.PI}
+                  minAzimuthAngle={0}
+                  maxAzimuthAngle={0}
+                />
+                <OrthographicCamera />
+                <pointLight position={[3, 1, 5]} intensity={300} />
+                <ambientLight intensity={0.8} />
                 <Avatar position={[-2, 0, -2]} scale={3.5} />
                 <Computer scales={0.5} />
                 <Chair position={[-3.5, 0.8, -2]} scales={0.01} />
-              </Suspense>
-            </Canvas>
+              </Canvas>
+            </Suspense>
           </div>
         ) : (
           ""

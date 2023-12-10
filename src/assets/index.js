@@ -34,15 +34,6 @@ import sm from "./projects/social.gif"
 import fnd from "./projects/news.gif"
 import dc from "./projects/dc.webp"
 
-// import meta from "./company/meta.png";
-// import shopify from "./company/shopify.png";
-// import starbucks from "./company/starbucks.png";
-// import tesla from "./company/tesla.png";
-
-// import carrent from "./carrent.png";
-// import jobit from "./jobit.png";
-// import tripguide from "./tripguide.png";
-
 export {
   dc,
   ina,

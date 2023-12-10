@@ -27,14 +27,11 @@ const Experience = () => {
               <VerticalTimelineElement
                 key={exp.company_name}
                 contentStyle={{ background: "#0000", color: "#fff" }}
-                contentArrowStyle={{ borderRight: '7px solid  #915EFF' }}
+                contentArrowStyle={{ borderRight: "7px solid  #915EFF" }}
                 date={exp.date}
                 icon={
                   <div className="bg-primary rounded-full">
-                    <img 
-                      src={exp.icon}
-                      alt={exp.company_name}
-                    />
+                    <img src={exp.icon} alt={exp.company_name} />
                   </div>
                 }
               >
@@ -46,7 +43,7 @@ const Experience = () => {
                 </motion.div>
                 <ul className="my-5 list-disc ml-5 space-y-2">
                   {exp.points.map((point) => (
-                    <li>{point}</li>
+                    <li key={point}>{point}</li>
                   ))}
                 </ul>
               </VerticalTimelineElement>
