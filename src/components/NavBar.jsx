@@ -38,7 +38,6 @@ const NavBar = () => {
             }}
             className='flex items-center'
           >
-            {/* style={{ "border-radius": "100%", "height": "70px" }} */}
             <img src={`${logo}`} className='w-12 h-12 object-contain rounded-full' alt="Me" />
             <p className='text-color-white text-[20px] font-bold cursor-pointer flex' >&nbsp; Anuj Sharma &nbsp;{ useMediaQuery('(min-width:1000px)') ? "| @anujsharmartx" : ""}</p>
           </Link>

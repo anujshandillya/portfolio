@@ -32,7 +32,6 @@ const Projects = () => {
                   }}
                   className="bg-primary rounded-[20px] py-2 px-2 min-h-[280px] flex justify-evenly flex-col"
                 >
-                  
                   <img
                     src={project.image}
                     alt={project.name}
@@ -51,8 +50,10 @@ const Projects = () => {
                     variants={fadeIn("", "", 0.1, 1)}
                     className="mt-1 text-secondary text-[14px] max-w-3xl leading-[30px]"
                   >
-                    {project.tags.map((tag,index) => (
-                      <span className={tag.color} key={tag.name}>#{tag.name}&nbsp;</span>
+                    {project.tags.map((tag, index) => (
+                      <span className={tag.color} key={tag.name}>
+                        #{tag.name}&nbsp;
+                      </span>
                     ))}
                   </motion.p>
                   <br />

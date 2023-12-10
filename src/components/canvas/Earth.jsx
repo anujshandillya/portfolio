@@ -19,7 +19,7 @@ const EarthCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
       camera={{}}
     >
-      <Suspense fallback={null}>
+      
         <OrbitControls
           autoRotate={true}
           enableZoom={false}
@@ -28,7 +28,7 @@ const EarthCanvas = () => {
         />
 
         <Earth />
-      </Suspense>
+      
     </Canvas>
   );
 };
