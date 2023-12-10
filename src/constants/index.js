@@ -27,6 +27,7 @@ import {
   ina,
   fnd,
   sm,
+  dc,
 } from "../assets";
 
 const navLinks = [
@@ -237,7 +238,7 @@ const projects = [
         color: "text-indigo-400",
       },
     ],
-    image: ina,
+    image: dc,
   },
   {
     name: "Fake News Detector",
