@@ -1,7 +1,8 @@
 import Avatar from "./Avatar";
 import Box from "./Box";
 import Computer from "./Computer";
-import Model4 from "./Model4";
 import Chair from "./Chair";
+import Earth from "./Earth";
+import Stars from "./Stars";
 
-export { Chair, Avatar, Box, Computer, Model4 };
+export { Chair, Avatar, Box, Computer, Earth, Stars };
