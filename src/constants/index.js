@@ -68,6 +68,25 @@ const services = [
   },
 ];
 
+const servicesmobile = [
+  {
+    title: "React Developer",
+    icon: reactjs,
+  },
+  {
+    title: "Backend Developer",
+    icon: nodejs,
+  },
+  {
+    title: "Competitive Programmer",
+    icon: cpp,
+  },
+  {
+    title: "Artist",
+    icon: ai,
+  }
+];
+
 const technologies = [
   {
     name: "React JS",
@@ -98,6 +117,8 @@ const technologies = [
     icon: py,
   },
 ];
+
+
 
 const experiences = [
   {
@@ -254,7 +275,70 @@ const projects = [
   },
 ];
 
-export { navLinks, technologies, services, experiences, projects };
+const projectsmobile = [
+  {
+    name: "ZAIKA - Pure veg",
+    description:
+    "Elevate your dining experience with our Restaurant App, offering a seamless interface for browsing menus, making reservations, and savoring culinary delights, all at your fingertips.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "text-purple-500",
+      },
+      {
+        name: "stripe",
+        color: "text-indigo-500",
+      },
+    ],
+    image: ina,
+  },
+  {
+    name: "Social Media",
+    description:
+    "Enabling seamless social experiences, our recently developed platform facilitates user registration, effortless login, and easy sharing of memorable moments through hassle-free uploads.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "material-ui",
+        color: "text-blue-500",
+      },
+    ],
+    image: sm,
+  },
+  {
+    name: "Discord bot",
+    description:
+    "Enhance your Discord server with our custom bot, bringing functionality and fun through features like moderation, automation, and entertainment, creating a vibrant and engaging community experience.",
+    tags: [
+      {
+        name: "python",
+        color: "text-lime-200",
+      },
+      {
+        name: "discord.py",
+        color: "text-indigo-400",
+      },
+    ],
+    image: dc,
+  },
+];
+
+export { navLinks, technologies, services, experiences, projects, projectsmobile, servicesmobile };
 
 
 // experiences, testimonials, projects, services

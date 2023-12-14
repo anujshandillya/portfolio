@@ -4,7 +4,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import { services } from "../constants";
+import { services, servicesmobile } from "../constants";
 import { Tilt } from "react-tilt";
 import { useMediaQuery } from "@mui/material";
 
@@ -29,6 +29,7 @@ const ServiceCard = (index, title, icon) => (
 );
 
 const About = () => {
+  const mapping = useMediaQuery("(min-width:390px)") ? services : servicesmobile
   return (
     <>
       <motion.div
@@ -69,7 +70,7 @@ const About = () => {
       </a>
 
       <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((services, index) => (
+        {mapping.map((services, index) => (
           <Tilt className="xs:w-[250px] w-full" key={index}>
             <motion.div
               variants={fadeIn("right", "spring", index * 1, 0.75)}

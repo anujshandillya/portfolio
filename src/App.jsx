@@ -18,14 +18,14 @@ const App = () => {
           <NavBar />
           <Me />
         </div>
-        <div className="">
+        <div className="relative z-0">
           <About />
-          <Experience />
-          <Skills />
-          <Projects />
         </div>
 
         <div className="relative z-0">
+          <Experience />
+          <Skills />
+          <Projects />
           <Contact />
           <Stars />
         </div>
