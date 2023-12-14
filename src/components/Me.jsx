@@ -37,6 +37,7 @@ const Me = () => {
               <ambientLight intensity={0.5} />
               <spotLight position={[0, 4, 3]} />
               <Suspense fallback={<Loader />}>
+                <OrbitControls enableZoom={false}/>
                 <Box scale={1} />
               </Suspense>
             </Canvas>
