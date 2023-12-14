@@ -18,8 +18,6 @@ const App = () => {
           <NavBar />
           <Me />
         </div>
-        {/* <div className="relative z-0"></div> */}
-
         <div className="relative z-0">
           <About />
           <Experience />
