@@ -7,6 +7,7 @@ import {
   Skills,
   Contact,
   Projects,
+  PopUp,
 } from "./components";
 import { Stars } from "./components/canvas";
 
@@ -25,6 +26,7 @@ const App = () => {
         </div>
         <div className="relative z-0">
           <Skills />
+          {/* <PopUp /> */}
           <Contact />
           <Stars />
         </div>
