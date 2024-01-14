@@ -16,10 +16,10 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    if (field !== "") {
+    if (field !== "" || field !== "success") {
       setInterval(() => {
         setfield("");
-      }, 2000);
+      }, 3000);
     }
   }, [field]);
   const handleSubmit = (e) => {
@@ -51,6 +51,7 @@ const Contact = () => {
         )
         .then((result) => {
           console.log(result.text);
+          setfield("success");
         })
         .catch((error) => {
           console.log(error.text);
@@ -76,6 +77,13 @@ const Contact = () => {
                 className={`${styles.sectionHeadText} my-2`}
               >
                 Contact..<span className="text-[#915EFF]">.</span>
+              </motion.p>
+            ) : field === "success" ? (
+              <motion.p
+                variants={slideIn("right", "tween", 0.2, 1)}
+                className={`${styles.sectionHeadText} my-2`}
+              >
+                Success..<span className="text-green-500">.</span>
               </motion.p>
             ) : (
               <motion.p
@@ -108,7 +116,11 @@ const Contact = () => {
                   }
                   onChange={(e) => setName(e.target.value)}
                   value={form.name}
-                  className={`bg-tertiaty py-4 px-6 ${field==="name" ? "placeholder:text-red-400" : "placeholder:text-secondary"} text-white rounded-lg outlined-none border-none font-medium`}
+                  className={`bg-tertiaty py-4 px-6 ${
+                    field === "name"
+                      ? "placeholder:text-red-400"
+                      : "placeholder:text-secondary"
+                  } text-white rounded-lg outlined-none border-none font-medium`}
                 />
               </label>
               <label className="flex flex-col">
@@ -124,7 +136,11 @@ const Contact = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   value={form.email}
                   // value={form.email}
-                  className={`bg-tertiaty py-4 px-6 ${field==="email" ? "placeholder:text-red-400" : "placeholder:text-secondary"} text-white rounded-lg outlined-none border-none font-medium`}
+                  className={`bg-tertiaty py-4 px-6 ${
+                    field === "email"
+                      ? "placeholder:text-red-400"
+                      : "placeholder:text-secondary"
+                  } text-white rounded-lg outlined-none border-none font-medium`}
                 />
               </label>
               <label className="flex flex-col">
@@ -139,7 +155,11 @@ const Contact = () => {
                   }
                   onChange={(e) => setMessage(e.target.value)}
                   value={form.message}
-                  className={`bg-tertiaty py-4 px-6 ${field==="message" ? "placeholder:text-red-400" : "placeholder:text-secondary"} text-white rounded-lg outlined-none border-none font-medium`}
+                  className={`bg-tertiaty py-4 px-6 ${
+                    field === "message"
+                      ? "placeholder:text-red-400"
+                      : "placeholder:text-secondary"
+                  } text-white rounded-lg outlined-none border-none font-medium`}
                 />
               </label>
               <button
