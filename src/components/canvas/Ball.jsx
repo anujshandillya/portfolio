@@ -36,6 +36,7 @@ const BallCanvas = (props) => {
   return (
     <>
       <Canvas>
+        <OrbitControls enableZoom={false} enablePan={false} />
         <PerspectiveCamera />
         <ambientLight />
         <spotLight />
