@@ -1,5 +1,9 @@
 import React from "react";
 import { LocationOn, Email } from "@mui/icons-material";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import ClosedCaptionIcon from '@mui/icons-material/ClosedCaption';
+import CodeIcon from '@mui/icons-material/Code';
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { motion } from "framer-motion";
@@ -62,12 +66,25 @@ const About = () => {
         digital experiences. Let's collaborate and bring your ideas to life!
       </motion.p>
       <br />
-      <span className="mx-10">
-        Faridabad <LocationOn />
+      <span className="mx-7">
+        <LocationOn style={{fontSize:'2rem'}} /><span className="text-[18px]">Faridabad</span>
       </span>
-      <a className="mx-9" href="#contact">
-        Email <Email />
+      <a className="mx-7" href="#contact">
+        <Email style={{fontSize:'2rem'}} /><span className="text-[18px]">Email</span>
       </a>
+      <a className="mx-7" href="https://github.com/anujshandillya">
+        <GitHubIcon style={{fontSize:'2rem'}} /><span className="text-[18px]">Github</span>
+      </a>
+      <a className="mx-7" href="https://www.linkedin.com/in/anuj-sharma-957407227/">
+        <LinkedInIcon style={{fontSize:'2rem'}} /><span className="text-[18px]">LinkedIn</span>
+      </a>
+      <a className="mx-7" href="https://codeforces.com/profile/anujshandillya">
+        <CodeIcon style={{fontSize:'2rem'}} /><span className="text-[18px]">Codeforces</span>
+      </a>
+      <a className="mx-7" href="https://www.codechef.com/users/anujshandillya">
+        <ClosedCaptionIcon style={{fontSize:'2rem'}} /><span className="text-[18px]">CodeChef</span>
+      </a>
+      
 
       <div className="mt-20 flex flex-wrap gap-10">
         {mapping.map((services, index) => (
