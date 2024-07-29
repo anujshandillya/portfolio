@@ -19,7 +19,7 @@ const Ball = (props) => {
       <Float speed={1.75} rotationIntensity={0.75} floatIntensity={10}>
         <ambientLight intensity={1} />
         <Sphere scale={2}>
-          <meshNormalMaterial />
+          {/* <meshNormalMaterial /> */}
           <Decal
             position={[0, 0, 1]}
             rotation={[2 * Math.PI, 0, 6.25]}

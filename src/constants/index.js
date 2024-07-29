@@ -16,6 +16,10 @@ import {
   fnd,
   sm,
   dc,
+  next,
+  aws,
+  gsap,
+  docker,
 } from "../assets";
 
 const navLinks = [
@@ -34,37 +38,85 @@ const navLinks = [
 ];
 
 const services = [
-  {
-    title: "React Developer",
-    icon: reactjs,
-  },
+  // 1
   {
     title: "Backend Developer",
     icon: nodejs,
   },
+  // 2
   {
     title: "Competitive Programmer",
     icon: cpp,
   },
+  // 3
+  {
+    title: "python",
+    icon: py,
+  },
+  // 4
+  {
+    title: "MongoDB",
+    icon: mongodb,
+  },
+  // 5
+  {
+    title: "React Developer",
+    icon: reactjs,
+  },
+  // 6
+  {
+    title: "gsap",
+    icon: gsap,
+  },
+  // 7
+  {
+    title: "next",
+    icon: next,
+  },
+  // 8
+  {
+    title: "aws",
+    icon: aws,
+  },
+  // 9
+  {
+    title: "docker",
+    icon: docker,
+  },
+  // 10
+  {
+    title: "Redux Toolkit",
+    icon: redux,
+  },
+  // 11
+  {
+    title: "Framer Motion",
+    icon: fm
+  },
+  // 12
+  {
+    title: "Three JS",
+    icon: threejs,
+  },
+  // 13
   {
     title: "Artist",
     icon: ai,
   },
-  {
-    title: "Digital Creator",
-    icon: dig,
-  },
+  // 14
   {
     title: "Editor",
     icon: ps,
   },
-  {
-    title: "Blender",
-    icon: blender,
-  },
+  // 15
   {
     title: "Video Editor",
     icon: pr
+  },
+  // 16
+  {
+    title: "Blender",
+    icon: blender,
   },
 ];
 
