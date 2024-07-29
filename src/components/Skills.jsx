@@ -41,7 +41,7 @@ const Skills = (props) => {
           trigger: ser1[i],
           start: "top 80%",
           end: "top 60%",
-          scrub: 1,
+          scrub: 3,
         },
       });
     }
@@ -54,7 +54,7 @@ const Skills = (props) => {
           trigger: ser2[i],
           start: "top 75%",
           end: "top 60%",
-          scrub: 1,
+          scrub: 3,
         },
       });
     }
@@ -67,7 +67,7 @@ const Skills = (props) => {
           trigger: ser3[i],
           start: "top 70%",
           end: "top 60%",
-          scrub: 1,
+          scrub: 3,
         },
       });
     }
@@ -80,7 +80,7 @@ const Skills = (props) => {
           trigger: ser4[i],
           start: "top 65%",
           end: "top 60%",
-          scrub: 1,
+          scrub: 3,
         },
       });
     }
@@ -93,7 +93,7 @@ const Skills = (props) => {
           trigger: ser5[i],
           start: "top 60%",
           end: "top 60%",
-          scrub: 1,
+          scrub: 3,
         },
       });
     }
