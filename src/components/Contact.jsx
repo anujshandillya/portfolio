@@ -7,14 +7,37 @@ import { styles } from "../styles";
 import { Earth } from "./canvas";
 import Loader from "./canvas/Loader";
 import emailjs from "@emailjs/browser";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+  const earthref = useRef();
+  const contactref = useRef();
   const form = useRef();
   const [field, setfield] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-
+  useGSAP(() => {
+    gsap.from(earthref.current, {
+      x:1000,
+      duration: 2,
+      ease: "back.out",
+      scrollTrigger: {
+        trigger: earthref.current,
+      }
+    });
+    gsap.from(contactref.current, {
+      x:-1000,
+      duration: 2,
+      ease: "back.out",
+      scrollTrigger: {
+        trigger: earthref.current,
+      }
+    })
+  })
   useEffect(() => {
     if (field !== "" || field !== "success") {
       setInterval(() => {
@@ -62,43 +85,39 @@ const Contact = () => {
   };
   return (
     <>
-      <motion.div
-        variants={textVariant()}
+      <div
         className={`${useMediaQuery("(min-width:390px)") ? "" : "mt-8"}`}
       >
-        <motion.div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
-          <motion.div
-            variants={slideIn("left", "tween", 0.2, 1)}
+        <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+          <div
+            ref={contactref}
             className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
           >
             {field === "" ? (
-              <motion.p
-                variants={slideIn("right", "tween", 0.2, 1)}
+              <p
                 className={`${styles.sectionHeadText} my-2`}
               >
                 Contact..<span className="text-[#915EFF]">.</span>
-              </motion.p>
+              </p>
             ) : field === "success" ? (
-              <motion.p
-                variants={slideIn("right", "tween", 0.2, 1)}
+              <p
                 className={`${styles.sectionHeadText} my-2`}
               >
                 Success..<span className="text-green-500">.</span>
-              </motion.p>
+              </p>
             ) : (
-              <motion.p
-                variants={slideIn("right", "tween", 0.2, 1)}
+              <p
                 className={`${styles.sectionHeadText} my-2`}
               >
                 Error..<span className="text-red-600">.</span>
-              </motion.p>
+              </p>
             )}
-            {/* <motion.p
+            {/* <p
               variants={slideIn("right", "tween", 0.2, 1)}
               className={`${styles.sectionHeadText} my-2`}
             >
               Contact..<span className="text-[#915EFF]">.</span>
-            </motion.p> */}
+            </p> */}
             <form
               ref={form}
               onSubmit={handleSubmit}
@@ -170,14 +189,14 @@ const Contact = () => {
                 Submit...
               </button>
             </form>
-          </motion.div>
-          <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
+          </div>
+          <div ref={earthref} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
             <Suspense fallback={<Loader />}>
               <Earth />
             </Suspense>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </>
   );
 };

@@ -9,8 +9,34 @@ import Box from "./canvas/Box";
 import Avatar from "./canvas/Avatar";
 import { Chair, Computer, Loader } from "./canvas";
 import { useMediaQuery } from "@mui/material";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Me = () => {
+  useGSAP(() => {
+    gsap.from("#box", {
+      duration: 1.5,
+      opacity: 0,
+    });
+    gsap.from("#anuj", {
+      duration: 1.5,
+      y: 600,
+      scale: 0.2
+    });
+    gsap.from("#head-anuj", {
+      duration: 1.5,
+      x: -600,
+      ease: 'back.out',
+      scale: 0.2
+    });
+    gsap.from("#para-anuj", {
+      duration: 1.5,
+      x: -1200,
+      delay: 1.5,
+      scale: 2,
+      ease: 'back.out'
+    });
+  })
   return (
     <section className="relative w-full h-screen mx-auto">
       <div className="absolute inset-0 top-[90px] max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5">
@@ -18,21 +44,23 @@ const Me = () => {
           {useMediaQuery("(min-width:900px)") ? (
             ""
           ) : (
-            <img src="/anuj-av.png" alt="Anuj Sharma" />
+            <img id="anuj" src="/anuj-av.png" alt="Anuj Sharma" />
           )}
           <h1
+          id="head-anuj"
             className={`font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2`}
           >
             Hi, I'm <span className="text_field">Anuj Sharma</span>
           </h1>
           <p
+          id="para-anuj"
             className={`text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2 text-white-300`}
           >
             Web Developer, Competitive Programmer, <br /> Artist, Video Editor.
           </p>
         </div>
         {useMediaQuery("(min-width:900px)") ? (
-          <div className="flex w-[400px] h-[400px]">
+          <div id="box" className="flex w-[400px] h-[400px]">
             <Canvas>
               <ambientLight intensity={0.5} />
               <spotLight position={[0, 4, 3]} />
@@ -48,7 +76,7 @@ const Me = () => {
         {useMediaQuery("(min-width:900px)") ? (
           <div className="absolute top-[300px] w-[90%] h-[100%] m-auto">
             <Suspense fallback={<Loader />}>
-              <Canvas camera={{ position: [0, -20, 0], fov: 20 }}>
+              <Canvas id="anuj" camera={{ position: [0, -20, 0], fov: 20 }}>
                 <OrbitControls
                   enableZoom={false}
                   minPolarAngle={(5.7 * Math.PI) / 6}
