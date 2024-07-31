@@ -1,7 +1,5 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { SectionWrapper } from "../hoc";
-import { motion } from "framer-motion";
-import { textVariant, fadeIn, slideIn } from "../utils/motion";
 import { useMediaQuery } from "@mui/material";
 import { styles } from "../styles";
 import { Earth } from "./canvas";
@@ -112,12 +110,6 @@ const Contact = () => {
                 Error..<span className="text-red-600">.</span>
               </p>
             )}
-            {/* <p
-              variants={slideIn("right", "tween", 0.2, 1)}
-              className={`${styles.sectionHeadText} my-2`}
-            >
-              Contact..<span className="text-[#915EFF]">.</span>
-            </p> */}
             <form
               ref={form}
               onSubmit={handleSubmit}
@@ -154,7 +146,6 @@ const Contact = () => {
                   }
                   onChange={(e) => setEmail(e.target.value)}
                   value={form.email}
-                  // value={form.email}
                   className={`bg-tertiaty py-4 px-6 ${
                     field === "email"
                       ? "placeholder:text-red-400"

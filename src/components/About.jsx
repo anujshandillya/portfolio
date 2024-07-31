@@ -1,37 +1,16 @@
 import React, { useRef } from "react";
-import { LocationOn, Email } from "@mui/icons-material";
+import { Email } from "@mui/icons-material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ClosedCaptionIcon from "@mui/icons-material/ClosedCaption";
 import CodeIcon from "@mui/icons-material/Code";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
-import { services, servicesmobile } from "../constants";
-import { Tilt } from "react-tilt";
 import { useMediaQuery } from "@mui/material";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-
-const ServiceCard = (index, title, icon) => (
-  <Tilt className="xs:w-[250px] w-full">
-    <div className="w-full white-[#915EFF]-gradient p-[1px] rounded-[20px] shadow-card">
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-      </div>
-    </div>
-  </Tilt>
-);
 
 const About = () => {
   const divref=useRef();
@@ -100,9 +79,6 @@ const About = () => {
           digital experiences. Let's collaborate and bring your ideas to life!
         </p>
         <br />
-        {/* <span className="mx-7">
-        <LocationOn style={{fontSize:'2rem'}} /><span className="text-[18px]">Faridabad</span>
-      </span> */}
         <div class="flex items-center justify-center">
           <div ref={anchoref} class="p-8 rounded shadow-lg">
             <a className="opacity-0" href="#contact">

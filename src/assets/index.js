@@ -18,7 +18,6 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
 import dig from "./dig.png";
-import rtx from "./rtx.avif";
 import ps from "./tech/ps.png";
 import ai from "./tech/ai.png";
 import blender from "./tech/blender.png";
@@ -33,14 +32,14 @@ import pr from "./tech/Pr.png";
 import fm from "./tech/framer-motion.svg"
 import ina from "./Image_not_available.png"
 import sm from "./projects/social.gif"
-import fnd from "./projects/news.gif"
-import dc from "./projects/dc.webp"
+import docbot from "./projects/docbot.png"
+import zaika from "./projects/zaika.png"
 
 export {
-  dc,
+  docbot,
+  zaika,
   ina,
   sm,
-  fnd,
   fm,
   pr,
   ps,
@@ -68,7 +67,6 @@ export {
   tailwind,
   threejs,
   me,
-  rtx,
   dig,
   next,
   docker,
