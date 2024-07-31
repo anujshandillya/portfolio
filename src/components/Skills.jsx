@@ -9,8 +9,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = (props) => {
-  const x=useMediaQuery("(min-width:390px)")?"30px":"10px"
-  const g=useMediaQuery("(min-width:390px)")?"200px":"30px"
+  const umq=useMediaQuery("(min-width:450px)");
+  const x=umq?"30px":"0px"
+  const g=umq?"200px":"0px"
   console.log(x);
   const div1=useRef();
   const div2=useRef();
@@ -23,71 +24,138 @@ const Skills = (props) => {
     const ser3=gsap.utils.toArray(div3.current.children);
     const ser4=gsap.utils.toArray(div4.current.children);
     const ser5=gsap.utils.toArray(div5.current.children);
-
-    for(var i=0;i<ser1.length;i++) {
-      gsap.to(ser1[i],{
-        gap: g,
-        margin: x,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ser1[i],
-          start: "top 80%",
-          end: "top 60%",
-          scrub: 3,
-        },
-      });
-    }
-    for(var i=0;i<ser2.length;i++) {
-      gsap.to(ser2[i],{
-        gap: g,
-        margin: x,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ser2[i],
-          start: "top 75%",
-          end: "top 60%",
-          scrub: 3,
-        },
-      });
-    }
-    for(var i=0;i<ser3.length;i++) {
-      gsap.to(ser3[i],{
-        gap: g,
-        margin: x,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ser3[i],
-          start: "top 70%",
-          end: "top 60%",
-          scrub: 3,
-        },
-      });
-    }
-    for(var i=0;i<ser4.length;i++) {
-      gsap.to(ser4[i],{
-        gap: g,
-        margin: x,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ser4[i],
-          start: "top 65%",
-          end: "top 60%",
-          scrub: 3,
-        },
-      });
-    }
-    for(var i=0;i<ser5.length;i++) {
-      gsap.to(ser5[i],{
-        gap: g,
-        margin: x,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ser5[i],
-          start: "top 60%",
-          end: "top 60%",
-          scrub: 3,
-        },
-      });
+    if(umq) {
+      for(var i=0;i<ser1.length;i++) {
+        gsap.to(ser1[i],{
+          gap: g,
+          margin: x,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ser1[i],
+            start: "top 80%",
+            end: "top 60%",
+            scrub: 3,
+          },
+        });
+      }
+      for(var i=0;i<ser2.length;i++) {
+        gsap.to(ser2[i],{
+          gap: g,
+          margin: x,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ser2[i],
+            start: "top 75%",
+            end: "top 60%",
+            scrub: 3,
+          },
+        });
+      }
+      for(var i=0;i<ser3.length;i++) {
+        gsap.to(ser3[i],{
+          gap: g,
+          margin: x,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ser3[i],
+            start: "top 70%",
+            end: "top 60%",
+            scrub: 3,
+          },
+        });
+      }
+      for(var i=0;i<ser4.length;i++) {
+        gsap.to(ser4[i],{
+          gap: g,
+          margin: x,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ser4[i],
+            start: "top 65%",
+            end: "top 60%",
+            scrub: 3,
+          },
+        });
+      }
+      for(var i=0;i<ser5.length;i++) {
+        gsap.to(ser5[i],{
+          gap: g,
+          margin: x,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ser5[i],
+            start: "top 60%",
+            end: "top 60%",
+            scrub: 3,
+          },
+        });
+      }
+    }else {
+      for(var i=0;i<ser1.length;i++) {
+        gsap.from(ser1[i],{
+          gap: g,
+          margin: x,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ser1[i],
+            start: "top 80%",
+            end: "top 60%",
+            scrub: 3,
+          },
+        });
+      }
+      for(var i=0;i<ser2.length;i++) {
+        gsap.from(ser2[i],{
+          gap: g,
+          margin: x,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ser2[i],
+            start: "top 75%",
+            end: "top 60%",
+            scrub: 3,
+          },
+        });
+      }
+      for(var i=0;i<ser3.length;i++) {
+        gsap.from(ser3[i],{
+          gap: g,
+          margin: x,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ser3[i],
+            start: "top 70%",
+            end: "top 60%",
+            scrub: 3,
+          },
+        });
+      }
+      for(var i=0;i<ser4.length;i++) {
+        gsap.from(ser4[i],{
+          gap: g,
+          margin: x,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ser4[i],
+            start: "top 65%",
+            end: "top 60%",
+            scrub: 3,
+          },
+        });
+      }
+      for(var i=0;i<ser5.length;i++) {
+        gsap.from(ser5[i],{
+          gap: g,
+          margin: x,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ser5[i],
+            start: "top 60%",
+            end: "top 60%",
+            scrub: 3,
+          },
+        });
+      }
     }
   })
   const mapping = services;
