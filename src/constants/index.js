@@ -4,7 +4,6 @@ import {
   nodejs,
   mongodb,
   threejs,
-  dig,
   ps,
   ai,
   blender,
@@ -13,13 +12,13 @@ import {
   pr,
   fm,
   ina,
-  fnd,
   sm,
-  dc,
   next,
   aws,
   gsap,
   docker,
+  zaika,
+  docbot,
 } from "../assets";
 
 const navLinks = [
@@ -120,58 +119,6 @@ const services = [
   },
 ];
 
-const servicesmobile = [
-  {
-    title: "React Developer",
-    icon: reactjs,
-  },
-  {
-    title: "Backend Developer",
-    icon: nodejs,
-  },
-  {
-    title: "Competitive Programmer",
-    icon: cpp,
-  },
-  {
-    title: "Artist",
-    icon: ai,
-  }
-];
-
-const technologies = [
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "Framer Motion",
-    icon: fm
-  },
-  {
-    name: "python",
-    icon: py,
-  },
-];
-
-
-
 const experiences = [
   {
     title: "Full Stack Web Developer",
@@ -189,57 +136,26 @@ const experiences = [
   }
 ];
 
-// const testimonials = [
-//   {
-//     testimonial:
-//       "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-//     name: "Sara Lee",
-//     designation: "CFO",
-//     company: "Acme Co",
-//     image: "https://randomuser.me/api/portraits/women/4.jpg",
-//   },
-//   {
-//     testimonial:
-//       "I've never met a web developer who truly cares about their clients' success like Rick does.",
-//     name: "Chris Brown",
-//     designation: "COO",
-//     company: "DEF Corp",
-//     image: "https://randomuser.me/api/portraits/men/5.jpg",
-//   },
-//   {
-//     testimonial:
-//       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-//     name: "Lisa Wang",
-//     designation: "CTO",
-//     company: "456 Enterprises",
-//     image: "https://randomuser.me/api/portraits/women/6.jpg",
-//   },
-// ];
-
 const projects = [
   {
-    name: "Weather forecasting app",
+    name: "Social Media",
     description:
-    "Experience precision weather predictions at your fingertips with our innovative Weather Forecasting App, leveraging real-time data through seamless API integration to deliver accurate and up-to-the-minute weather updates.",
+    "Enabling seamless social experiences, our recently developed platform facilitates user registration, effortless login, and easy sharing of memorable moments through hassle-free uploads.",
     tags: [
       {
-        name: "html",
-        color: "text-red-500",
+        name: "react",
+        color: "blue-text-gradient",
       },
       {
-        name: "css",
-        color: "text-orange-500",
+        name: "mongodb",
+        color: "green-text-gradient",
       },
       {
-        name: "javascript",
-        color: "text-yellow-200",
-      },
-      {
-        name: "bootstrap",
-        color: "text-purple-500",
+        name: "material-ui",
+        color: "text-blue-500",
       },
     ],
-    image: ina,
+    image: sm,
   },
   {
     name: "ZAIKA - Pure veg",
@@ -263,134 +179,35 @@ const projects = [
         color: "text-indigo-500",
       },
     ],
-    image: ina,
+    image: zaika,
   },
   {
-    name: "Social Media",
+    name: "DocBot - Chat with PDF",
     description:
-    "Enabling seamless social experiences, our recently developed platform facilitates user registration, effortless login, and easy sharing of memorable moments through hassle-free uploads.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "material-ui",
-        color: "text-blue-500",
-      },
-    ],
-    image: sm,
-  },
-  {
-    name: "Discord bot",
-    description:
-    "Enhance your Discord server with our custom bot, bringing functionality and fun through features like moderation, automation, and entertainment, creating a vibrant and engaging community experience.",
+    "\"DocBot\" suggests a platform where users can upload PDF documents and ask questions related to the content of those documents. It implies a central hub or repository for querying information from PDF files. Users can search for specific information, extract data, or seek answers to their queries by interacting with the uploaded PDF documents.",
     tags: [
       {
         name: "python",
         color: "text-lime-200",
-      },
-      {
-        name: "discord.py",
-        color: "text-indigo-400",
-      },
-    ],
-    image: dc,
-  },
-  {
-    name: "Fake News Detector",
-    description:
-    "Deploying a robust arsenal of algorithms including logistic regression, gradient boosting, decision trees, and random forest, our Fake News Detector employs cutting-edge technology to enhance accuracy in identifying and mitigating misinformation.",
-    tags: [
-      {
-        name: "flask",
-        color: "blue-text-gradient",
       },
       {
         name: "jupyter-notebook",
         color: "orange-text-gradient",
       },
       {
-        name: "python",
-        color: "text-lime-200",
+        name: "numpy",
+        color: "text-blue-200",
       },
       {
-        name: "bootstrap",
+        name: "streamlit",
         color: "text-purple-500",
       },
     ],
-    image: fnd,
+    image: docbot,
   },
 ];
 
-const projectsmobile = [
-  {
-    name: "ZAIKA - Pure veg",
-    description:
-    "Elevate your dining experience with our Restaurant App, offering a seamless interface for browsing menus, making reservations, and savoring culinary delights, all at your fingertips.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "bootstrap",
-        color: "text-purple-500",
-      },
-      {
-        name: "stripe",
-        color: "text-indigo-500",
-      },
-    ],
-    image: ina,
-  },
-  {
-    name: "Social Media",
-    description:
-    "Enabling seamless social experiences, our recently developed platform facilitates user registration, effortless login, and easy sharing of memorable moments through hassle-free uploads.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "material-ui",
-        color: "text-blue-500",
-      },
-    ],
-    image: sm,
-  },
-  {
-    name: "Discord bot",
-    description:
-    "Enhance your Discord server with our custom bot, bringing functionality and fun through features like moderation, automation, and entertainment, creating a vibrant and engaging community experience.",
-    tags: [
-      {
-        name: "python",
-        color: "text-lime-200",
-      },
-      {
-        name: "discord.py",
-        color: "text-indigo-400",
-      },
-    ],
-    image: dc,
-  },
-];
-
-export { navLinks, technologies, services, experiences, projects, projectsmobile, servicesmobile };
+export { navLinks, services, experiences, projects };
 
 
 // experiences, testimonials, projects, services

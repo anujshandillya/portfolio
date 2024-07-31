@@ -5,7 +5,7 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Me from "./Me";
 import Experience from "./Experience";
-import { Avatar, Box, Computer, Earth, Chair, Loader } from "./canvas";
+import { Avatar, Computer, Earth, Chair, Loader } from "./canvas";
 
 export {
   Loader,
@@ -17,7 +17,6 @@ export {
   Projects,
   Contact,
   Avatar,
-  Box,
   Computer,
   Earth,
   Chair
