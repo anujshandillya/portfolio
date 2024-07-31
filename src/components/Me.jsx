@@ -1,42 +1,41 @@
 import React, { Suspense } from "react";
 import "./Me.css";
 import { Canvas } from "@react-three/fiber";
-import {
-  OrbitControls,
-  OrthographicCamera,
-} from "@react-three/drei";
-import Box from "./canvas/Box";
+import { OrbitControls, OrthographicCamera } from "@react-three/drei";
 import Avatar from "./canvas/Avatar";
 import { Chair, Computer, Loader } from "./canvas";
 import { useMediaQuery } from "@mui/material";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { logo, me } from "../assets";
 
 const Me = () => {
   useGSAP(() => {
     gsap.from("#box", {
-      duration: 1.5,
-      opacity: 0,
+      x: 700,
+      duration: 1,
+      scale: 3,
+      ease: "back.out",
     });
     gsap.from("#anuj", {
       duration: 1.5,
       y: 600,
-      scale: 0.2
+      scale: 0.2,
     });
     gsap.from("#head-anuj", {
       duration: 1.5,
       x: -600,
-      ease: 'back.out',
-      scale: 0.2
+      ease: "back.out",
+      scale: 0.2,
     });
     gsap.from("#para-anuj", {
       duration: 1.5,
       x: -1200,
       delay: 1.5,
       scale: 2,
-      ease: 'back.out'
+      ease: "back.out",
     });
-  })
+  });
   return (
     <section className="relative w-full h-screen mx-auto">
       <div className="absolute inset-0 top-[90px] max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5">
@@ -47,28 +46,21 @@ const Me = () => {
             <img id="anuj" src="/anuj-av.png" alt="Anuj Sharma" />
           )}
           <h1
-          id="head-anuj"
+            id="head-anuj"
             className={`font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2`}
           >
             Hi, I'm <span className="text_field">Anuj Sharma</span>
           </h1>
           <p
-          id="para-anuj"
+            id="para-anuj"
             className={`text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2 text-white-300`}
           >
             Web Developer, Competitive Programmer, <br /> Artist, Video Editor.
           </p>
         </div>
         {useMediaQuery("(min-width:900px)") ? (
-          <div id="box" className="flex w-[400px] h-[400px]">
-            <Canvas>
-              <ambientLight intensity={0.5} />
-              <spotLight position={[0, 4, 3]} />
-              <Suspense fallback={<Loader />}>
-                <OrbitControls enablePan={false} enableZoom={false}/>
-                <Box scale={1} />
-              </Suspense>
-            </Canvas>
+          <div id="box" className="w-[330px]">
+            <img className="overflow-hidden rounded-full" src={me} alt="Anuj Sharma" />
           </div>
         ) : (
           ""

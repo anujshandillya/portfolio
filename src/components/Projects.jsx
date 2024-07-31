@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
-import { projects, projectsmobile } from "../constants";
+import { projects } from "../constants";
 import { useMediaQuery } from "@mui/material";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -9,9 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
-  const mapping = useMediaQuery("(min-width:390px)")
-    ? projects
-    : projectsmobile;
+  const mapping = projects;
   const imgref = useRef();
   useGSAP(() => {
     const imgs = gsap.utils.toArray(imgref.current.children);
@@ -26,12 +24,6 @@ const Projects = () => {
           start: "top 10%",
           end: "bottom 20%",
           pin: true,
-          // markers: {
-          //   startColor: "white",
-          //   endColor: "white",
-          //   fontSize: "12px",
-          //   indent: 20,
-          // },
           scrub: 2,
         },
       });

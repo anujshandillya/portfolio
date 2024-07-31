@@ -1,16 +1,8 @@
 import React, { useRef } from "react";
 import { SectionWrapper } from "../hoc";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
-import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
-import { motion } from "framer-motion";
 import { useMediaQuery } from "@mui/material";
-import { Suspense } from "react";
-import BallCanvas from "./canvas/Ball";
-import { technologies } from "../constants";
-import { Loader } from "./canvas";
-import { services, servicesmobile } from "../constants";
-import { Tilt } from "react-tilt";
+import { services } from "../constants";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -98,9 +90,7 @@ const Skills = (props) => {
       });
     }
   })
-  const mapping = useMediaQuery("(min-width:390px)")
-    ? services
-    : servicesmobile;
+  const mapping = services;
   return (
     <>
       <div className={`${useMediaQuery("(min-width:390px)") ? "" : "mt-8"}`}>
