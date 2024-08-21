@@ -10,9 +10,12 @@ import { useMediaQuery } from "@mui/material";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useSelector } from "react-redux";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const theme=useSelector((state)=>state.mode);
+  const bool=theme==='dark';
   const divref=useRef();
   useGSAP(() => {
     const target=divref.current;
@@ -40,13 +43,13 @@ const About = () => {
     <>
       <div ref={divref}>
         <div className={`${useMediaQuery("(min-width:390px)") ? "" : "mt-8"}`}>
-          <p className={`${styles.sectionSubText}`}>INTRODUCTION</p>
-          <p className={`${styles.sectionHeadText} my-2`}>
+          <p className={`${bool?styles.sectionSubText:styles.sectionSubText2}`}>INTRODUCTION</p>
+          <p className={`${bool?styles.sectionHeadText:styles.sectionHeadText2} my-2`}>
             OVERVIEW..<span className="text-[#915EFF]">.</span>
           </p>
         </div>
 
-        <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+        <p className={`mt-4 ${bool?'text-secondary':'text-[#838383]'} text-[17px] max-w-3xl leading-[30px]`}>
           Hello! I'm Anuj Sharma, a creative developer specializing in MERN
           stack web development. With a strong command of frontend and backend
           technologies, I craft dynamic and user-friendly websites. Beyond

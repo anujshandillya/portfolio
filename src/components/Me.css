@@ -10,3 +10,16 @@
     transition: 0.7s;
     -webkit-text-stroke: 1px #915EFF;
 }
+
+.text_field2{
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 1px #000000;
+    transition: 0.7s;
+}
+
+.text_field2:hover {
+    color: #915EFF;
+    transition: 0.7s;
+    -webkit-text-stroke: 1px #915EFF;
+}

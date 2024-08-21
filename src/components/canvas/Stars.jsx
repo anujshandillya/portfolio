@@ -2,11 +2,14 @@ import { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload, OrbitControls } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
+import { useSelector } from "react-redux";
 
 const Stars = (props) => {
+  const theme=useSelector((state)=>state.mode);
+  const bool=theme==='dark';
   const ref = useRef();
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(500), { radius: 2 })
+    random.inSphere(new Float32Array(1000), { radius: 2 })
   );
 
   useFrame(({ clock }) => {
@@ -21,7 +24,7 @@ const Stars = (props) => {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color="#9bbdd7"
+          color={bool?"#9bbdd7":"black"}
           size={0.005}
           sizeAttenuation={true}
           depthWrite={false}

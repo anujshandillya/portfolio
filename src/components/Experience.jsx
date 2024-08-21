@@ -10,23 +10,26 @@ import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { useMediaQuery } from "@mui/material";
 import { styles } from "../styles";
+import { useSelector } from "react-redux";
 
 const Experience = () => {
+  const theme=useSelector((state)=>state.mode);
+  const bool=theme==='dark';
   return (
     <>
       <motion.div
         variants={textVariant()}
         className={`${useMediaQuery("(min-width:390px)") ? "" : "mt-8"}`}
       >
-        <motion.p className={`${styles.sectionHeadText} my-2`}>
+        <motion.p className={`${bool?styles.sectionHeadText:styles.sectionHeadText2} my-2`}>
           EXPERIENCE..<span className="text-[#915EFF]">.</span>
         </motion.p>
         <motion.div className="mt-12 flex flex-row flex-wrap justify-center gap-10">
-          <VerticalTimeline>
+          <VerticalTimeline lineColor={bool?"white":"black"}>
             {experiences.map((exp) => (
               <VerticalTimelineElement
                 key={exp.company_name}
-                contentStyle={{ background: "#0000", color: "#fff" }}
+                contentStyle={{ background: "#0000", color: bool?'#fff':'black' }}
                 contentArrowStyle={{ borderRight: "7px solid  #915EFF" }}
                 date={exp.date}
                 icon={
@@ -36,14 +39,14 @@ const Experience = () => {
                 }
               >
                 <motion.div>
-                  <motion.h3 className="text-white text-[20px] font-bold">
+                  <motion.h3 className={`${bool?'text-white':'text-black'} text-[20px] font-bold`}>
                     {exp.title}
                   </motion.h3>
-                  <motion.p>{exp.company_name}</motion.p>
+                  <motion.p className={`${bool?'text-white':'text-black'}`}>{exp.company_name}</motion.p>
                 </motion.div>
                 <ul className="my-5 list-disc ml-5 space-y-2">
                   {exp.points.map((point) => (
-                    <li key={point}>{point}</li>
+                    <li className={`${bool?'text-white':'text-black'}`} key={point}>{point}</li>
                   ))}
                 </ul>
               </VerticalTimelineElement>

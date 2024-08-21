@@ -6,9 +6,12 @@ import { useMediaQuery } from "@mui/material";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useSelector } from "react-redux";
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
+  const theme=useSelector((state)=>state.mode);
+  const bool=theme==='dark';
   const mapping = projects;
   const imgref = useRef();
   useGSAP(() => {
@@ -32,7 +35,7 @@ const Projects = () => {
   return (
     <>
       <div className={`${useMediaQuery("(min-width:350px)") ? "" : "mt-8"}`}>
-        <p className={`${styles.sectionHeadText} my-2`}>
+        <p className={`${bool?styles.sectionHeadText:styles.sectionHeadText2} my-2`}>
           Projects..<span className="text-[#915EFF]">.</span>
         </p>
         <div id="proimages" className="mt-20 flex flex-wrap gap-9" ref={imgref}>

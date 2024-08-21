@@ -8,9 +8,12 @@ import emailjs from "@emailjs/browser";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useSelector } from "react-redux";
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+  const theme=useSelector((state)=>state.mode);
+  const bool=theme==='dark';
   const earthref = useRef();
   const contactref = useRef();
   const form = useRef();
@@ -89,23 +92,23 @@ const Contact = () => {
         <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
           <div
             ref={contactref}
-            className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+            className={`flex-[0.75] ${bool?'bg-black-100':'bg-slate-200'} p-8 rounded-2xl`}
           >
             {field === "" ? (
               <p
-                className={`${styles.sectionHeadText} my-2`}
+                className={`${bool?styles.sectionHeadText:styles.sectionHeadText2} my-2`}
               >
                 Contact..<span className="text-[#915EFF]">.</span>
               </p>
             ) : field === "success" ? (
               <p
-                className={`${styles.sectionHeadText} my-2`}
+                className={`${bool?styles.sectionHeadText:styles.sectionHeadText2} my-2`}
               >
                 Success..<span className="text-green-500">.</span>
               </p>
             ) : (
               <p
-                className={`${styles.sectionHeadText} my-2`}
+                className={`${bool?styles.sectionHeadText:styles.sectionHeadText2} my-2`}
               >
                 Error..<span className="text-red-600">.</span>
               </p>
@@ -116,7 +119,7 @@ const Contact = () => {
               className="mt-12 flex flex-col gap-8"
             >
               <label className="flex flex-col">
-                <span className="text-white font-mediummb-4">Name</span>
+                <span className={`${bool?'text-white':'text-black'} font-medium`}>Name</span>
                 <input
                   type="text"
                   name="name"
@@ -127,15 +130,15 @@ const Contact = () => {
                   }
                   onChange={(e) => setName(e.target.value)}
                   value={form.name}
-                  className={`bg-tertiaty py-4 px-6 ${
+                  className={`${bool?'bg-tertiary':'bg-slate-300'} py-4 px-6 ${
                     field === "name"
                       ? "placeholder:text-red-400"
-                      : "placeholder:text-secondary"
-                  } text-white rounded-lg outlined-none border-none font-medium`}
+                      : (bool?"placeholder:text-secondary":"placeholder:text-slate-600")
+                  } ${bool?'text-white':'text-slate-600'} rounded-lg outlined-none border-none font-medium`}
                 />
               </label>
               <label className="flex flex-col">
-                <span className="t-white font-mediummb-4">Email</span>
+                <span className={`${bool?'text-white':'text-black'} font-medium`}>Email</span>
                 <input
                   type="email"
                   name="email"
@@ -146,15 +149,15 @@ const Contact = () => {
                   }
                   onChange={(e) => setEmail(e.target.value)}
                   value={form.email}
-                  className={`bg-tertiaty py-4 px-6 ${
+                  className={`${bool?'bg-tertiary':'bg-slate-300'} py-4 px-6 ${
                     field === "email"
                       ? "placeholder:text-red-400"
-                      : "placeholder:text-secondary"
-                  } text-white rounded-lg outlined-none border-none font-medium`}
+                      : (bool?"placeholder:text-secondary":"placeholder:text-slate-600")
+                  } ${bool?'text-white':'text-slate-600'} rounded-lg outlined-none border-none font-medium`}
                 />
               </label>
               <label className="flex flex-col">
-                <span className="text-white font-mediummb-4">Message</span>
+                <span className={`${bool?'text-white':'text-black'} font-medium`}>Message</span>
                 <textarea
                   rows="9"
                   name="message"
@@ -165,17 +168,17 @@ const Contact = () => {
                   }
                   onChange={(e) => setMessage(e.target.value)}
                   value={form.message}
-                  className={`bg-tertiaty py-4 px-6 ${
+                  className={`${bool?'bg-tertiary':'bg-slate-300'} py-4 px-6 ${
                     field === "message"
                       ? "placeholder:text-red-400"
-                      : "placeholder:text-secondary"
-                  } text-white rounded-lg outlined-none border-none font-medium`}
+                      : (bool?"placeholder:text-secondary":"placeholder:text-slate-600")
+                  } ${bool?'text-white':'text-slate-600'} rounded-lg outlined-none border-none font-medium`}
                 />
               </label>
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+                className="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
               >
                 Submit...
               </button>

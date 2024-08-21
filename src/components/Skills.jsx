@@ -6,9 +6,12 @@ import { services } from "../constants";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useSelector } from "react-redux";
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = (props) => {
+  const theme=useSelector((state)=>state.mode);
+  const bool=theme==='dark';
   const umq=useMediaQuery("(min-width:450px)");
   const x=umq?"30px":"0px"
   const g=umq?"200px":"0px"
@@ -162,7 +165,7 @@ const Skills = (props) => {
   return (
     <>
       <div className={`${useMediaQuery("(min-width:390px)") ? "" : "mt-8"}`}>
-        <p className={`${styles.sectionHeadText}`}>
+        <p className={`${bool?styles.sectionHeadText:styles.sectionHeadText2}`}>
           SKILLS..<span className="text-[#915EFF] mb-6">.</span>
         </p>
 

@@ -17,8 +17,11 @@ import {
   LinkedIn,
   X,
 } from "@mui/icons-material";
+import { useSelector } from "react-redux";
 
 const Me = () => {
+  const theme=useSelector((state)=>state.mode);
+  const bool=theme==='dark';
   useGSAP(() => {
     gsap.from("#box", {
       x: 700,
@@ -58,61 +61,61 @@ const Me = () => {
               </div>
               <div className="flex flex-row gap-3 py-2 justify-center">
                 <a href="#contact">
-                  <Email size={24} />
+                  <Email sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
                 </a>
                 <a
                   href="https://github.com/anujshandillya"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <GitHub size={24} />
+                  <GitHub sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/anuj-sharma-957407227/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <LinkedIn size={24} />
+                  <LinkedIn sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
                 </a>
                 <a
                   href="https://x.com/anujshandillya"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <X size={24} />
+                  <X sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
                 </a>
                 <a
                   href="https://codeforces.com/profile/anujshandillya"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Code size={24} />
+                  <Code sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
                 </a>
                 <a
                   href="https://www.codechef.com/users/anujshandillya"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <ClosedCaption size={24} />
+                  <ClosedCaption sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
                 </a>
                 <a
                   href="https://drive.google.com/file/d/1UsVNy7XtPSUGgBU6WsAk4lTzRK89JRGV/view?usp=drive_link"
                   target="_blank"
                 >
-                  <Description size={24} />
+                  <Description sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
                 </a>
               </div>
             </div>
           )}
           <h1
             id="head-anuj"
-            className={`font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2`}
+            className={`font-black ${bool?"text-white":"text-primary"} lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2`}
           >
-            Hi, I'm <span className="text_field">Anuj Sharma</span>
+            Hi, I'm <span className={`${bool?"text_field":"text_field2"}`}>Anuj Sharma</span>
           </h1>
           <p
             id="para-anuj"
-            className={`text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2 text-white-300`}
+            className={`${bool?"text-[#dfd9ff]":"text-[#915EFF]"} font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2 text-white-300`}
           >
             Web Developer, Competitive Programmer, <br /> Artist, Video Editor.
           </p>
@@ -126,48 +129,48 @@ const Me = () => {
             />
             <div className="flex flex-row gap-3 py-2 justify-center">
               <a href="#contact">
-                <Email size={24} />
+                <Email sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
               </a>
               <a
                 href="https://github.com/anujshandillya"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GitHub size={24} />
+                <GitHub sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
               </a>
               <a
                 href="https://www.linkedin.com/in/anuj-sharma-957407227/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LinkedIn size={24} />
+                <LinkedIn sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
               </a>
               <a
                 href="https://x.com/anujshandillya"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <X size={24} />
+                <X sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
               </a>
               <a
                 href="https://codeforces.com/profile/anujshandillya"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Code size={24} />
+                <Code sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
               </a>
               <a
                 href="https://www.codechef.com/users/anujshandillya"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <ClosedCaption size={24} />
+                <ClosedCaption sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
               </a>
               <a
                 href="https://drive.google.com/file/d/1UsVNy7XtPSUGgBU6WsAk4lTzRK89JRGV/view?usp=drive_link"
                 target="_blank"
               >
-                <Description size={24} />
+                <Description sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
               </a>
             </div>
           </div>
