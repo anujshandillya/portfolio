@@ -8,6 +8,15 @@ import { useMediaQuery } from "@mui/material";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { logo, me } from "../assets";
+import {
+  ClosedCaption,
+  Code,
+  Description,
+  Email,
+  GitHub,
+  LinkedIn,
+  X,
+} from "@mui/icons-material";
 
 const Me = () => {
   useGSAP(() => {
@@ -43,7 +52,57 @@ const Me = () => {
           {useMediaQuery("(min-width:900px)") ? (
             ""
           ) : (
-            <img id="anuj" src="/anuj-av.png" alt="Anuj Sharma" />
+            <div id="anuj">
+              <div>
+                <img src="/anuj-av.png" alt="Anuj Sharma" />
+              </div>
+              <div className="flex flex-row gap-3 py-2 justify-center">
+                <a href="#contact">
+                  <Email size={24} />
+                </a>
+                <a
+                  href="https://github.com/anujshandillya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GitHub size={24} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/anuj-sharma-957407227/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedIn size={24} />
+                </a>
+                <a
+                  href="https://x.com/anujshandillya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <X size={24} />
+                </a>
+                <a
+                  href="https://codeforces.com/profile/anujshandillya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Code size={24} />
+                </a>
+                <a
+                  href="https://www.codechef.com/users/anujshandillya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ClosedCaption size={24} />
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1UsVNy7XtPSUGgBU6WsAk4lTzRK89JRGV/view?usp=drive_link"
+                  target="_blank"
+                >
+                  <Description size={24} />
+                </a>
+              </div>
+            </div>
           )}
           <h1
             id="head-anuj"
@@ -59,8 +118,58 @@ const Me = () => {
           </p>
         </div>
         {useMediaQuery("(min-width:900px)") ? (
-          <div id="box" className="w-[330px]">
-            <img className="overflow-hidden rounded-full" src={me} alt="Anuj Sharma" />
+          <div id="box" className="w-[330px] z-10">
+            <img
+              className="overflow-hidden rounded-full"
+              src={me}
+              alt="Anuj Sharma"
+            />
+            <div className="flex flex-row gap-3 py-2 justify-center">
+              <a href="#contact">
+                <Email size={24} />
+              </a>
+              <a
+                href="https://github.com/anujshandillya"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHub size={24} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/anuj-sharma-957407227/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedIn size={24} />
+              </a>
+              <a
+                href="https://x.com/anujshandillya"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <X size={24} />
+              </a>
+              <a
+                href="https://codeforces.com/profile/anujshandillya"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Code size={24} />
+              </a>
+              <a
+                href="https://www.codechef.com/users/anujshandillya"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ClosedCaption size={24} />
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1UsVNy7XtPSUGgBU6WsAk4lTzRK89JRGV/view?usp=drive_link"
+                target="_blank"
+              >
+                <Description size={24} />
+              </a>
+            </div>
           </div>
         ) : (
           ""
