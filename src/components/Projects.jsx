@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
@@ -41,12 +42,14 @@ const Projects = () => {
         <div id="proimages" className="mt-20 flex flex-wrap gap-9" ref={imgref}>
           {mapping.map((project) => (
             <div key={project.name} className="items-center m-auto">
+              <Link to={`${project.site}`} target="_blank" rel="noopener noreferrer">
               <img
                 className="rounded-3xl"
                 width="1000px"
                 src={project.image}
                 alt={project.name}
-              />
+                />
+              </Link>
               <p className={`items-center text-bold text-[20px] text-center`}>
                 {project.name}
               </p>

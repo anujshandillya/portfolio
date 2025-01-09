@@ -31,11 +31,13 @@ import cpp from "./tech/c++.png";
 import pr from "./tech/Pr.png";
 import fm from "./tech/framer-motion.svg"
 import ina from "./Image_not_available.png"
-import sm from "./projects/social.gif"
+import sm from "./projects/social.png"
 import docbot from "./projects/docbot.png"
 import zaika from "./projects/zaika.png"
+import subtext from "./projects/subtext.png"
 
 export {
+  subtext,
   docbot,
   zaika,
   ina,

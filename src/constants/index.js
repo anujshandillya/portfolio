@@ -19,6 +19,7 @@ import {
   docker,
   zaika,
   docbot,
+  subtext,
 } from "../assets";
 
 const navLinks = [
@@ -138,69 +139,85 @@ const experiences = [
 
 const projects = [
   {
-    name: "Social Media",
-    description:
-    "Enabling seamless social experiences, our recently developed platform facilitates user registration, effortless login, and easy sharing of memorable moments through hassle-free uploads.",
+    name: "Subtext - Subtitle Generator and Embedder",
+    site:
+    "https://subtext.vercel.app/",
     tags: [
       {
-        name: "react",
+        name: "Next.js",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "PostgreSQL",
         color: "green-text-gradient",
       },
       {
-        name: "material-ui",
+        name: "TailwindCSS",
         color: "text-blue-500",
+      },
+      {
+        name: "Redux",
+        color: "text-purple-500",
+      },
+      {
+        name: "AWS",
+        color: "text-orange-500",
+      },
+      {
+        name: "Docker",
+        color: "text-blue-400",
+      },
+      {
+        name: "FFMpegWasm",
+        color: "text-purple-200",
+      },
+    ],
+    image: subtext,
+  },
+  {
+    name: "InstaChat - Social Media",
+    site:
+    "https://ic-client.vercel.app/",
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MaterialUI",
+        color: "text-blue-500",
+      },
+      {
+        name: "Redux",
+        color: "text-purple-500",
       },
     ],
     image: sm,
   },
   {
-    name: "ZAIKA - Pure veg",
-    description:
-    "Elevate your dining experience with our Restaurant App, offering a seamless interface for browsing menus, making reservations, and savoring culinary delights, all at your fingertips.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "bootstrap",
-        color: "text-purple-500",
-      },
-      {
-        name: "stripe",
-        color: "text-indigo-500",
-      },
-    ],
-    image: zaika,
-  },
-  {
     name: "DocBot - Chat with PDF",
-    description:
-    "\"DocBot\" suggests a platform where users can upload PDF documents and ask questions related to the content of those documents. It implies a central hub or repository for querying information from PDF files. Users can search for specific information, extract data, or seek answers to their queries by interacting with the uploaded PDF documents.",
+    site:
+    "https://docbotpdf.streamlit.app/",
     tags: [
       {
-        name: "python",
+        name: "Python",
         color: "text-lime-200",
       },
       {
-        name: "jupyter-notebook",
+        name: "JupyterNotebook",
         color: "orange-text-gradient",
       },
       {
-        name: "numpy",
+        name: "Numpy",
         color: "text-blue-200",
       },
       {
-        name: "streamlit",
-        color: "text-purple-500",
+        name: "Streamlit",
+        color: "text-red-500",
       },
     ],
     image: docbot,
