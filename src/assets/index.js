@@ -35,8 +35,10 @@ import sm from "./projects/social.png"
 import docbot from "./projects/docbot.png"
 import zaika from "./projects/zaika.png"
 import subtext from "./projects/subtext.png"
+import flyzy from "./flyzy.webp"
 
 export {
+  flyzy,
   subtext,
   docbot,
   zaika,

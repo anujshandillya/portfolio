@@ -34,7 +34,7 @@ const Experience = () => {
                 date={exp.date}
                 icon={
                   <div className="bg-primary rounded-full">
-                    <img src={exp.icon} alt={exp.company_name} />
+                    <img className="rounded-full" src={exp.icon} alt={exp.company_name} />
                   </div>
                 }
               >
@@ -42,13 +42,8 @@ const Experience = () => {
                   <motion.h3 className={`${bool?'text-white':'text-black'} text-[20px] font-bold`}>
                     {exp.title}
                   </motion.h3>
-                  <motion.p className={`${bool?'text-white':'text-black'}`}>{exp.company_name}</motion.p>
+                  <motion.p className={`${bool?'text-white':'text-black'}`}>@{exp.company_name}</motion.p>
                 </motion.div>
-                <ul className="my-5 list-disc ml-5 space-y-2">
-                  {exp.points.map((point) => (
-                    <li className={`${bool?'text-white':'text-black'}`} key={point}>{point}</li>
-                  ))}
-                </ul>
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>
