@@ -1,9 +1,4 @@
-import React, { useRef } from "react";
-import { Email } from "@mui/icons-material";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import ClosedCaptionIcon from "@mui/icons-material/ClosedCaption";
-import CodeIcon from "@mui/icons-material/Code";
+import { useRef } from "react";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { useMediaQuery } from "@mui/material";
@@ -50,10 +45,10 @@ const About = () => {
         </div>
 
         <p className={`mt-4 ${bool?'text-secondary':'text-[#838383]'} text-[17px] max-w-3xl leading-[30px]`}>
-          Hello! I'm Anuj Sharma, a creative developer specializing in MERN
+          Hello! I&apos;m Anuj Sharma, a creative developer specializing in MERN
           stack web development. With a strong command of frontend and backend
           technologies, I craft dynamic and user-friendly websites. Beyond
-          coding, I'm a skilled artist in sketching, painting, video editing,
+          coding, I&apos;m a skilled artist in sketching, painting, video editing,
           and photo editing.
           <br />
           <br />I strive to combine my technical prowess with my artistic
@@ -63,11 +58,13 @@ const About = () => {
           with the latest trends and technologies in the industry.
           <br />
           <br /> My diverse skill set allows me to create visually captivating
-          digital experiences. Let's collaborate and bring your ideas to life!
+          digital experiences. Let&apos;s collaborate and bring your ideas to life!
         </p>
       </div>
     </>
   );
 };
 
-export default SectionWrapper(About, "about");
+const AboutWrapper = SectionWrapper(About, "about")
+
+export default AboutWrapper

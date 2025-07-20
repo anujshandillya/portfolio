@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { projects } from "../constants";
@@ -55,7 +55,7 @@ const Projects = () => {
               </p>
               <p className={`items-center text-center`}>
                 {project.tags.map((tag) => (
-                  <span className={`${tag.color} px-auto`}>&nbsp; {`#${tag.name}`} &nbsp;</span>
+                  <span key={tag.name} className={`${tag.color} px-auto`}>&nbsp; {`#${tag.name}`} &nbsp;</span>
                 ))}
               </p>
             </div>
@@ -66,4 +66,6 @@ const Projects = () => {
   );
 };
 
-export default SectionWrapper(Projects, "projects");
+const ProjectsWrapper = SectionWrapper(Projects, "projects");
+
+export default ProjectsWrapper;

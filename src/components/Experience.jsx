@@ -1,4 +1,3 @@
-import React from "react";
 import { SectionWrapper } from "../hoc";
 import {
   VerticalTimelineElement,
@@ -53,4 +52,6 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "experience");
+const ExperienceWrapper = SectionWrapper(Experience, "experience");
+
+export default ExperienceWrapper;

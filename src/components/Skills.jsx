@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { useMediaQuery } from "@mui/material";
@@ -9,7 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useSelector } from "react-redux";
 gsap.registerPlugin(ScrollTrigger);
 
-const Skills = (props) => {
+const Skills = () => {
   const theme=useSelector((state)=>state.mode);
   const bool=theme==='dark';
   const umq=useMediaQuery("(min-width:450px)");
@@ -28,7 +28,7 @@ const Skills = (props) => {
     const ser4=gsap.utils.toArray(div4.current.children);
     const ser5=gsap.utils.toArray(div5.current.children);
     if(umq) {
-      for(var i=0;i<ser1.length;i++) {
+      for(let i=0;i<ser1.length;i++) {
         gsap.to(ser1[i],{
           gap: g,
           margin: x,
@@ -41,7 +41,7 @@ const Skills = (props) => {
           },
         });
       }
-      for(var i=0;i<ser2.length;i++) {
+      for(let i=0;i<ser2.length;i++) {
         gsap.to(ser2[i],{
           gap: g,
           margin: x,
@@ -54,7 +54,7 @@ const Skills = (props) => {
           },
         });
       }
-      for(var i=0;i<ser3.length;i++) {
+      for(let i=0;i<ser3.length;i++) {
         gsap.to(ser3[i],{
           gap: g,
           margin: x,
@@ -67,7 +67,7 @@ const Skills = (props) => {
           },
         });
       }
-      for(var i=0;i<ser4.length;i++) {
+      for(let i=0;i<ser4.length;i++) {
         gsap.to(ser4[i],{
           gap: g,
           margin: x,
@@ -80,7 +80,7 @@ const Skills = (props) => {
           },
         });
       }
-      for(var i=0;i<ser5.length;i++) {
+      for(let i=0;i<ser5.length;i++) {
         gsap.to(ser5[i],{
           gap: g,
           margin: x,
@@ -94,7 +94,7 @@ const Skills = (props) => {
         });
       }
     }else {
-      for(var i=0;i<ser1.length;i++) {
+      for(let i=0;i<ser1.length;i++) {
         gsap.from(ser1[i],{
           gap: g,
           margin: x,
@@ -107,7 +107,7 @@ const Skills = (props) => {
           },
         });
       }
-      for(var i=0;i<ser2.length;i++) {
+      for(let i=0;i<ser2.length;i++) {
         gsap.from(ser2[i],{
           gap: g,
           margin: x,
@@ -120,7 +120,7 @@ const Skills = (props) => {
           },
         });
       }
-      for(var i=0;i<ser3.length;i++) {
+      for(let i=0;i<ser3.length;i++) {
         gsap.from(ser3[i],{
           gap: g,
           margin: x,
@@ -133,7 +133,7 @@ const Skills = (props) => {
           },
         });
       }
-      for(var i=0;i<ser4.length;i++) {
+      for(let i=0;i<ser4.length;i++) {
         gsap.from(ser4[i],{
           gap: g,
           margin: x,
@@ -146,7 +146,7 @@ const Skills = (props) => {
           },
         });
       }
-      for(var i=0;i<ser5.length;i++) {
+      for(let i=0;i<ser5.length;i++) {
         gsap.from(ser5[i],{
           gap: g,
           margin: x,
@@ -161,7 +161,7 @@ const Skills = (props) => {
       }
     }
   })
-  const mapping = services;
+
   return (
     <>
       <div className={`${useMediaQuery("(min-width:390px)") ? "" : "mt-8"}`}>
@@ -266,4 +266,6 @@ const Skills = (props) => {
   );
 };
 
-export default SectionWrapper(Skills, "skills");
+const SkillsWrapper = SectionWrapper(Skills, "skills");
+
+export default SkillsWrapper;

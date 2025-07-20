@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import "./Me.css";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, OrthographicCamera } from "@react-three/drei";
@@ -7,16 +7,7 @@ import { Chair, Computer, Loader } from "./canvas";
 import { useMediaQuery } from "@mui/material";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { logo, me } from "../assets";
-import {
-  ClosedCaption,
-  Code,
-  Description,
-  Email,
-  GitHub,
-  LinkedIn,
-  X,
-} from "@mui/icons-material";
+import { me } from "../assets";
 import { useSelector } from "react-redux";
 import Iconify from "../utils/iconify";
 
@@ -113,7 +104,7 @@ const Me = () => {
             id="head-anuj"
             className={`font-black ${bool?"text-white":"text-primary"} lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2`}
           >
-            Hi, I'm <span className={`${bool?"text_field":"text_field2"}`}>Anuj Sharma</span>
+            Hi, I&apos;m <span className={`${bool?"text_field":"text_field2"}`}>Anuj Sharma</span>
           </h1>
           <p
             id="para-anuj"

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 
 const Iconify = forwardRef(
-  ({ icon, width = 20, color, className }, ref) => {
+  ({ icon, width = 20, className }, ref) => {
     const theme=useSelector((state)=>state.mode);
   const bool=theme==='dark';
     return (

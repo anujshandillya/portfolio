@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { SectionWrapper } from "../hoc";
 import { useMediaQuery } from "@mui/material";
 import { styles } from "../styles";
@@ -48,11 +48,6 @@ const Contact = () => {
   }, [field]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    const Msg = {
-      name,
-      email,
-      message,
-    };
     try {
       if (name.length === 0) {
         setfield("name");
@@ -195,4 +190,6 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+const ContactWrapper = SectionWrapper(Contact, "contact");
+
+export default ContactWrapper;
