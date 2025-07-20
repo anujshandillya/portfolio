@@ -18,6 +18,7 @@ import {
   X,
 } from "@mui/icons-material";
 import { useSelector } from "react-redux";
+import Iconify from "../utils/iconify";
 
 const Me = () => {
   const theme=useSelector((state)=>state.mode);
@@ -61,48 +62,49 @@ const Me = () => {
               </div>
               <div className="flex flex-row gap-3 py-2 justify-center">
                 <a href="#contact">
-                  <Email sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
+                  <Iconify icon="ic:baseline-email" />
                 </a>
                 <a
                   href="https://github.com/anujshandillya"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <GitHub sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
+                  <Iconify icon="mdi:github" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/anuj-sharma-957407227/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <LinkedIn sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
+                  <Iconify icon="mdi:linkedin" />
                 </a>
                 <a
                   href="https://x.com/anujshandillya"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <X sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
+                  <Iconify icon="streamline-logos:x-twitter-logo" />
                 </a>
                 <a
                   href="https://codeforces.com/profile/anujshandillya"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Code sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
+                  <Iconify icon="simple-icons:codeforces" />
                 </a>
                 <a
                   href="https://www.codechef.com/users/anujshandillya"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <ClosedCaption sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
+                  <Iconify icon="simple-icons:codechef" />
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1UsVNy7XtPSUGgBU6WsAk4lTzRK89JRGV/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/15m6EzAhN3XokQU62OPgQ1mKTnhQhCkub/view?usp=sharing"
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <Description sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
+                  <Iconify icon="solar:document-outline" />
                 </a>
               </div>
             </div>
@@ -128,50 +130,51 @@ const Me = () => {
               alt="Anuj Sharma"
             />
             <div className="flex flex-row gap-3 py-2 justify-center">
-              <a href="#contact">
-                <Email sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
-              </a>
-              <a
-                href="https://github.com/anujshandillya"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHub sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/anuj-sharma-957407227/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedIn sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
-              </a>
-              <a
-                href="https://x.com/anujshandillya"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <X sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
-              </a>
-              <a
-                href="https://codeforces.com/profile/anujshandillya"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Code sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
-              </a>
-              <a
-                href="https://www.codechef.com/users/anujshandillya"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <ClosedCaption sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
-              </a>
-              <a
-                href="https://drive.google.com/file/d/1UsVNy7XtPSUGgBU6WsAk4lTzRK89JRGV/view?usp=drive_link"
-                target="_blank"
-              >
-                <Description sx={{ color: theme === 'dark' ? 'white' : 'rgb(5,8,22)', fontSize: "25px" }} />
-              </a>
+            <a href="#contact">
+                  <Iconify icon="ic:baseline-email" />
+                </a>
+                <a
+                  href="https://github.com/anujshandillya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Iconify icon="mdi:github" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/anuj-sharma-957407227/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Iconify icon="mdi:linkedin" />
+                </a>
+                <a
+                  href="https://x.com/anujshandillya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Iconify icon="streamline-logos:x-twitter-logo" />
+                </a>
+                <a
+                  href="https://codeforces.com/profile/anujshandillya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Iconify icon="simple-icons:codeforces" />
+                </a>
+                <a
+                  href="https://www.codechef.com/users/anujshandillya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Iconify icon="simple-icons:codechef" />
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/15m6EzAhN3XokQU62OPgQ1mKTnhQhCkub/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Iconify icon="solar:document-outline" />
+                </a>
             </div>
           </div>
         ) : (

@@ -50,7 +50,7 @@ const Projects = () => {
                 alt={project.name}
                 />
               </Link>
-              <p className={`items-center text-bold text-[20px] text-center`}>
+              <p className={`${bool?"text-[#dfd9ff]":"text-[#585757]"} items-center text-bold text-[20px] text-center`}>
                 {project.name}
               </p>
               <p className={`items-center text-center`}>
