@@ -20,7 +20,13 @@ import {
   zaika,
   docbot,
   subtext,
+  lamur,
   flyzy,
+  sio,
+  go,
+  js,
+  ts,
+  postgres,
 } from "../assets";
 
 const navLinks = [
@@ -51,8 +57,8 @@ const services = [
   },
   // 3
   {
-    title: "python",
-    icon: py,
+    title: "PostgreSQL",
+    icon: postgres,
   },
   // 4
   {
@@ -66,8 +72,8 @@ const services = [
   },
   // 6
   {
-    title: "gsap",
-    icon: gsap,
+    title: "Go",
+    icon: go,
   },
   // 7
   {
@@ -86,13 +92,13 @@ const services = [
   },
   // 10
   {
-    title: "Redux Toolkit",
-    icon: redux,
+    title: "JavaScript",
+    icon: js,
   },
   // 11
   {
-    title: "Framer Motion",
-    icon: fm
+    title: "socket.io",
+    icon: sio
   },
   // 12
   {
@@ -101,23 +107,24 @@ const services = [
   },
   // 13
   {
-    title: "Artist",
-    icon: ai,
+    title: "gsap",
+    icon: gsap,
   },
   // 14
   {
-    title: "Editor",
-    icon: ps,
+    title: "Redux Toolkit",
+    icon: redux,
   },
+  
   // 15
   {
-    title: "Video Editor",
-    icon: pr
+    title: "Typescript",
+    icon: ts
   },
   // 16
   {
-    title: "Blender",
-    icon: blender,
+    title: "python",
+    icon: py,
   },
 ];
 
@@ -141,7 +148,7 @@ const experiences = [
     company_name: "Flyzy",
     icon: flyzy,
     iconBg: "#383E56",
-    date: "Jan 2025 - Present",
+    date: "Jan 2025 - July 2025",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -153,6 +160,45 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    name: "LamurType - Typing Game with single and multiplayer modes",
+    site: "https://github.com/anujshandillya/lamurType",
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Golang",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "text-blue-500",
+      },
+      {
+        name: "ContextAPI",
+        color: "text-purple-500",
+      },
+      {
+        name: "Socket.io",
+        color: "text-blue-600"
+      },
+      {
+        name: "AWS",
+        color: "text-orange-500",
+      },
+      {
+        name: "Docker",
+        color: "text-blue-400",
+      },
+    ],
+    image: lamur,
+  },
   {
     name: "Subtext - Subtitle Generator and Embedder",
     site:
@@ -190,6 +236,30 @@ const projects = [
     image: subtext,
   },
   {
+    name: "DocBot - Chat with PDF",
+    site:
+    "https://docbotpdf.streamlit.app/",
+    tags: [
+      {
+        name: "Python",
+        color: "bg-gradient-to-r from-yellow-400 via-yellow-500 via-green-400 to-blue-400 bg-clip-text text-transparent",
+      },
+      {
+        name: "JupyterNotebook",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Numpy",
+        color: "text-blue-200",
+      },
+      {
+        name: "Streamlit",
+        color: "text-red-500",
+      },
+    ],
+    image: docbot,
+  },
+  {
     name: "InstaChat - Social Media",
     site:
     "https://ic-client.vercel.app/",
@@ -212,30 +282,6 @@ const projects = [
       },
     ],
     image: sm,
-  },
-  {
-    name: "DocBot - Chat with PDF",
-    site:
-    "https://docbotpdf.streamlit.app/",
-    tags: [
-      {
-        name: "Python",
-        color: "text-lime-200",
-      },
-      {
-        name: "JupyterNotebook",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Numpy",
-        color: "text-blue-200",
-      },
-      {
-        name: "Streamlit",
-        color: "text-red-500",
-      },
-    ],
-    image: docbot,
   },
 ];
 

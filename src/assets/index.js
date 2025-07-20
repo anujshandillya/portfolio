@@ -1,5 +1,5 @@
 import logo from "./logo.png";
-import me from "./me.png";
+import me from "./me.jpeg";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -16,7 +16,12 @@ import reactjs from "./tech/reactjs.png";
 import next from "./tech/next.svg";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
+import go from "./tech/go.png";
+import ts from "./tech/ts.png";
+import js from "./tech/js.png";
+import postgres from "./tech/pgesql.png"
 import threejs from "./tech/threejs.svg";
+import sio from "./tech/sio.svg";
 import dig from "./dig.png";
 import ps from "./tech/ps.png";
 import ai from "./tech/ai.png";
@@ -35,11 +40,13 @@ import sm from "./projects/social.png"
 import docbot from "./projects/docbot.png"
 import zaika from "./projects/zaika.png"
 import subtext from "./projects/subtext.png"
+import lamur from "./projects/lamurType.gif"
 import flyzy from "./flyzy.webp"
 
 export {
   flyzy,
   subtext,
+  lamur,
   docbot,
   zaika,
   ina,
@@ -70,6 +77,11 @@ export {
   redux,
   tailwind,
   threejs,
+  go,
+  ts,
+  js,
+  postgres,
+  sio,
   me,
   dig,
   next,
