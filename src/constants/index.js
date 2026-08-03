@@ -15,6 +15,8 @@ import {
   subtext,
   lamur,
   flyzy,
+  jcbust,
+  iiith,
   sio,
   go,
   js,
@@ -123,21 +125,7 @@ const services = [
 
 const experiences = [
   {
-    title: "Full Stack Web Developer",
-    company_name: "HS Webtech Solutions",
-    icon: reactjs,
-    iconBg: "#383E56",
-    date: "May 2023 - July 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-      "Incorporated Google Adsense for client business website."
-    ],
-  },
-  {
-    title: "Full Stack Developer Intern",
+    title: "Software Developer Intern(Full Stack)",
     company_name: "Flyzy",
     icon: flyzy,
     iconBg: "#383E56",
@@ -149,6 +137,23 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
       "Incorporated Google Adsense for client business website."
     ],
+  }
+];
+
+const education = [
+  {
+    title: "J.C. Bose University of Science and Technology, YMCA, Faridabad",
+    company_name: "B.Tech, Computer Engineering",
+    icon: jcbust,
+    iconBg: "#383E56",
+    date: "Sept 2021 - July 2025",
+  },
+  {
+    title: "International Institute of Information Technology, Hyderabad",
+    company_name: "M.Tech, Computer Science and Engineering",
+    icon: iiith,
+    iconBg: "#383E56",
+    date: "July 2026 - July 2028",
   }
 ];
 
@@ -278,7 +283,7 @@ const projects = [
   },
 ];
 
-export { navLinks, services, experiences, projects };
+export { navLinks, services, experiences, education, projects };
 
 
 // experiences, testimonials, projects, services

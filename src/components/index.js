@@ -5,6 +5,7 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Me from "./Me";
 import Experience from "./Experience";
+import Education from "./Education";
 import { Avatar, Computer, Earth, Chair, Loader } from "./canvas";
 
 export {
@@ -14,6 +15,7 @@ export {
   About,
   Skills,
   Experience,
+  Education,
   Projects,
   Contact,
   Avatar,

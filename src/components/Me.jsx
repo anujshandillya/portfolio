@@ -160,7 +160,7 @@ const Me = () => {
                   <Iconify icon="simple-icons:codechef" />
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/15m6EzAhN3XokQU62OPgQ1mKTnhQhCkub/view?usp=sharing"
+                  href="https://drive.google.com/drive/folders/1AAkciZ32Cz4ORiEk4Qb0nwoRC7g0zjv-?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                 >

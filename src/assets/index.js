@@ -42,9 +42,13 @@ import zaika from "./projects/zaika.png"
 import subtext from "./projects/subtext.png"
 import lamur from "./projects/lamurType.gif"
 import flyzy from "./flyzy.webp"
+import jcbust from "./jcbust.png"
+import iiith from "./iiith.jpg"
 
 export {
   flyzy,
+  jcbust,
+  iiith,
   subtext,
   lamur,
   docbot,
